@@ -1,0 +1,1451 @@
+@font-face {
+  font-family: Century;
+  src: url("../../font/911Fonts.com_CenturyGothicRegular__-_911fonts.com-fonts-mhpY.ttf"); }
+@font-face {
+  font-family: Vladimir;
+  src: url("../../font/BellGothicStd-Bold.otf"); }
+@font-face {
+  font-family: Justus Roman;
+  font-style: normal;
+  font-weight: normal;
+  src: local("Justus Roman"), url("Justus-Roman.woff") format("woff"); }
+.no-padding > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.bordered {
+  border: 1px solid red; }
+
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0; }
+
+p {
+  font-family: Century;
+  font-size: 3vh; }
+
+#content {
+  padding: 0; }
+
+#retourenhaut {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  border-radius: 50%;
+  font-size: 2em;
+  background: black;
+  text-align: center;
+  width: 45px;
+  height: 45px; }
+
+.parallax {
+  /* Set a specific height */
+  height: 600px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.tempo-construc {
+  margin-top: 30%;
+  margin-bottom: 30%;
+  height: 5em;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  background-color: #40A463;
+  padding: 3%; }
+
+#content-login {
+  background-color: #F2F2F2; }
+  #content-login h1, #content-login h3 {
+    text-align: center;
+    font-family: Century;
+    letter-spacing: 5px; }
+  #content-login #titre-login {
+    border: 1px solid black;
+    padding: 2%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%; }
+  #content-login #login {
+    margin-top: 3%;
+    margin-bottom: 500px;
+    text-align: center; }
+    #content-login #login div {
+      margin-top: 3%;
+      margin-bottom: 5%; }
+
+/*! Pushy - v1.1.0 - 2017-1-30
+* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+* https://github.com/christophery/pushy/
+* by Christopher Yee */
+/* Menu Appearance */
+.pushy {
+  position: fixed;
+  width: 650px;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  background: #191918;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  /* enables momentum scrolling in iOS overflow elements */ }
+  .pushy a {
+    display: block;
+    color: #b3b3b1;
+    padding: 15px 30px;
+    text-decoration: none; }
+  .pushy a:hover {
+    color: #FFF; }
+  .pushy ul:first-child {
+    margin-top: 10px; }
+  .pushy.pushy-left {
+    left: 0; }
+  .pushy.pushy-right {
+    right: 0; }
+
+.pushy-content {
+  visibility: hidden; }
+  .pushy-content li {
+    font-size: 1em;
+    list-style: none; }
+    .pushy-content li a {
+      font-size: 1em; }
+  .pushy-content ul {
+    margin: 0;
+    padding: 0; }
+
+/* Menu Movement */
+.pushy-left {
+  -webkit-transform: translate3d(-650px, 0, 0);
+  -ms-transform: translate3d(-650px, 0, 0);
+  transform: translate3d(-650px, 0, 0); }
+
+.pushy-open-left #container,
+.pushy-open-left .push {
+  -webkit-transform: translate3d(650px, 0, 0);
+  -ms-transform: translate3d(650px, 0, 0);
+  transform: translate3d(650px, 0, 0); }
+
+.pushy-right {
+  -webkit-transform: translate3d(650px, 0, 0);
+  -ms-transform: translate3d(650px, 0, 0);
+  transform: translate3d(650px, 0, 0); }
+
+.pushy-open-right #container,
+.pushy-open-right .push {
+  -webkit-transform: translate3d(-650px, 0, 0);
+  -ms-transform: translate3d(-650px, 0, 0);
+  transform: translate3d(-650px, 0, 0); }
+
+.pushy-open-left .pushy,
+.pushy-open-right .pushy {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+.pushy-open-left .pushy-content,
+.pushy-open-right .pushy-content {
+  visibility: visible; }
+
+/* Menu Transitions */
+#container,
+.pushy,
+.push {
+  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+.pushy-content {
+  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+/* Site Overlay */
+.site-overlay {
+  display: none; }
+
+.pushy-open-left .site-overlay,
+.pushy-open-right .site-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-animation: fade 500ms;
+  animation: fade 500ms; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* Submenu Appearance */
+.pushy-submenu {
+  /* Submenu Buttons */
+  /* Submenu Icon */ }
+  .pushy-submenu ul {
+    padding-left: 15px;
+    transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out; }
+    .pushy-submenu ul .pushy-link {
+      transition: opacity 0.2s ease-in-out; }
+  .pushy-submenu button {
+    width: 100%;
+    color: #b3b3b1;
+    padding: 15px 30px;
+    text-align: left;
+    background: transparent;
+    border: 0; }
+    .pushy-submenu button:hover {
+      color: #FFF; }
+  .pushy-submenu > a,
+  .pushy-submenu > button {
+    position: relative; }
+  .pushy-submenu > a::after,
+  .pushy-submenu > button::after {
+    content: '';
+    display: block;
+    height: 11px;
+    width: 8px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    background: url("../img/arrow.svg") no-repeat;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: transform 0.2s; }
+
+/* Submenu Movement */
+.pushy-submenu-closed ul {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden; }
+.pushy-submenu-closed .pushy-link {
+  opacity: 0; }
+
+.pushy-submenu-open {
+  /* Submenu Icon */ }
+  .pushy-submenu-open ul {
+    max-height: 1000px;
+    visibility: visible; }
+  .pushy-submenu-open .pushy-link {
+    opacity: 1; }
+  .pushy-submenu-open a::after,
+  .pushy-submenu-open button::after {
+    -webkit-transform: translateY(-50%) rotate(90deg);
+    -ms-transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%) rotate(90deg); }
+
+header {
+  background-color: #000000;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0; }
+  header #logo_JDF {
+    margin-top: 2%;
+    width: 30%;
+    margin-bottom: 2%; }
+  header .icon-boutique-vitrine {
+    color: white;
+    position: absolute;
+    top: 13%;
+    left: 2%;
+    padding: 0.5%;
+    text-align: left;
+    font-size: 1.2em;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition-duration: 1s; }
+  header .icon-boutique-vitrine:hover {
+    background-color: white;
+    color: #000000; }
+  header nav {
+    z-index: 999;
+    background-color: #000000;
+    padding-top: 1%;
+    border-top: 2px solid #FFF; }
+    header nav li {
+      display: inline;
+      padding: 5%; }
+    header nav li a:hover {
+      text-shadow: 0px 0px 10px white; }
+    header nav img {
+      margin-bottom: 1%; }
+  header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    padding-bottom: 5%; }
+  header .header-right-parts {
+    width: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    float: right;
+    padding: 1%; }
+    header .header-right-parts .trad-site {
+      font-family: Vladimir; }
+      header .header-right-parts .trad-site span {
+        color: white; }
+      header .header-right-parts .trad-site a:hover {
+        text-decoration: none;
+        color: #C0c0c0; }
+  header .paraRS {
+    border: 1.5px solid #FFF;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+    cursor: pointer; }
+    header .paraRS a {
+      webkit-text-fill-color: #FFF; }
+    header .paraRS i {
+      color: #FFF;
+      font-size: 1em; }
+  header .paraRS:hover {
+    background-color: white; }
+    header .paraRS:hover i {
+      color: #000000; }
+
+.menu-btn {
+  width: 100px;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 0px;
+  background: #000000;
+  color: #FFF;
+  text-align: center;
+  font-size: 35px;
+  cursor: pointer;
+  border: 0px; }
+  .menu-btn:hover {
+    opacity: 0.6; }
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center; }
+
+#menu li {
+  float: left;
+  margin: auto;
+  padding: 0;
+  background-color: #000000; }
+
+#menu li a {
+  display: block;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+#menu ul li ul {
+  display: none; }
+
+#menu ul li:hover ul {
+  display: block;
+  position: absolute;
+  z-index: 99999;
+  background-color: #000000;
+  width: 26em; }
+
+#menu ul li:hover ul a {
+  padding-top: 5%;
+  padding-bottom: 5%; }
+
+#menu li:hover ul li {
+  float: none; }
+
+.site-footer {
+  background-color: #000000;
+  margin-top: 5%; }
+  .site-footer .content-client-footer {
+    margin-top: 5vh;
+    margin-left: 2vw; }
+    .site-footer .content-client-footer h3 {
+      font-size: 1em;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      padding-bottom: 5%;
+      border-bottom: 2px solid white; }
+    .site-footer .content-client-footer p {
+      margin-bottom: 0;
+      color: white;
+      font-size: 1em; }
+  .site-footer form {
+    margin-left: 15%;
+    margin-top: 10%; }
+    .site-footer form label {
+      color: white;
+      font-size: 1em; }
+    .site-footer form .div-newsletter {
+      display: flex; }
+      .site-footer form .div-newsletter input {
+        border: none;
+        border-radius: 0;
+        border-bottom: 2px solid white;
+        background-color: #000000;
+        padding: 0; }
+      .site-footer form .div-newsletter input:focus {
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none; }
+      .site-footer form .div-newsletter button {
+        margin-left: 5%;
+        border-radius: 0;
+        background-color: #000000;
+        border: 1px solid white;
+        color: white;
+        transition-duration: 1s; }
+      .site-footer form .div-newsletter button:hover {
+        background-color: white;
+        color: #000000; }
+  .site-footer p {
+    color: white;
+    font-size: 1.3em; }
+  .site-footer #map {
+    z-index: 999;
+    overflow: none;
+    height: 250px;
+    margin-top: 25px; }
+
+.sur-sousfooter {
+  height: 80px;
+  background-color: #000000;
+  text-align: center; }
+  .sur-sousfooter a {
+    padding: 2%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #FFF; }
+
+#sous-footer {
+  background-color: #000000;
+  border-top: 1px solid #F2F2F2;
+  color: white;
+  height: 50px;
+  margin-top: -1%; }
+  #sous-footer h5 {
+    padding-top: 1%; }
+
+@media screen and (min-width: 901px) and (max-width: 1450px) {
+  nav li a {
+    font-size: 1em; }
+
+  #container-origine {
+    margin-top: -150px; }
+
+  #titre-histoire h1 {
+    font-size: 2em; }
+
+  #atelier-content p {
+    font-size: 1.4em; }
+  #atelier-content #div1-atelier img {
+    margin-top: -5.5em; }
+
+  #images-rondes-atelier {
+    margin-top: -8%; }
+
+  #origin-liste {
+    padding-top: 10%;
+    height: 300px; } }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  header .menu-btn {
+    margin-left: 5%;
+    margin-top: 2%; }
+
+  #accueil-origine #img-accueil-origine {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0; }
+
+  #image-background-accueil {
+    height: 80vh; }
+
+  #matieres-premieres {
+    margin-bottom: 3%; }
+
+  /* COLLECTION ORIGINE */
+  #accueil-origine {
+    margin-top: 0;
+    height: 680px; }
+
+  #origine-div1 p, #origine-div2 p {
+    font-size: 1em; }
+
+  #origin-liste {
+    padding-top: 0;
+    height: 0; }
+
+  .div-pyramide {
+    width: 50%;
+    margin-left: 0; }
+
+  #container-origine {
+    margin-top: -50px; }
+
+  /* COLLECTION HESPERIDES */
+  #hesperides-div1 {
+    font-size: 1em;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  #hesperides-div2 {
+    font-size: 1em;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .conteneur-images {
+    background-repeat: no-repeat;
+    height: 50em; }
+
+  #couverture_hesperyde {
+    background-size: initial; }
+
+  #parfum_osiris {
+    background-repeat: repeat-y; }
+
+  /* PARFUMEUR */
+  #div2-parfumeur {
+    padding-left: 0; }
+    #div2-parfumeur img {
+      margin-left: 0; }
+    #div2-parfumeur #div2div1-parfumeur p, #div2-parfumeur #div2div1-parfumeur h3 {
+      margin-left: 4%;
+      padding-right: 4%; }
+
+  #div3-parfumeur img {
+    padding-left: 0; }
+
+  /* MARQUE AUJOURD'HUI */
+  #marque-aujourdhui #marque-auj1 {
+    width: 100%; }
+  #marque-aujourdhui #div1-marque p {
+    padding-left: 0; }
+
+  /* COLLECTION 1920 */
+  #accueil-1920 {
+    height: 400px; }
+
+  /*COLLECTION ETOFFE */
+  #img-accueil-etoffe {
+    height: 600px; }
+
+  #div2-etoffes {
+    height: initial;
+    background-repeat: repeat;
+    margin-bottom: 6%; }
+
+  .etoffes-parfums {
+    background-size: initial; }
+
+  .particular_etoffe {
+    background-size: 100%; }
+
+  .particular-etoffe_2 {
+    background-size: 120%; }
+
+  .images-parfums-etoffe {
+    margin-left: 0; }
+
+  .pres-etoffe {
+    width: 50%;
+    margin-top: 0; }
+
+  /* ADMINISTRATEUR */
+  /*ADMIN-TEMPLATE */
+  #nav-admin {
+    width: auto; }
+
+  /*Pushy*/
+ /*! Pushy - v1.1.0 - 2017-1-30
+* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+* https://github.com/christophery/pushy/
+* by Christopher Yee */
+  /* Menu Appearance */
+  .pushy {
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    top: 0;
+    z-index: 9999;
+    background: #191918;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    /* enables momentum scrolling in iOS overflow elements */ }
+    .pushy a {
+      display: block;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      text-decoration: none; }
+    .pushy a:hover {
+      color: #FFF; }
+    .pushy ul:first-child {
+      margin-top: 10px; }
+    .pushy.pushy-left {
+      left: 0; }
+    .pushy.pushy-right {
+      right: 0; }
+
+  .pushy-content {
+    visibility: hidden; }
+    .pushy-content li {
+      font-size: 1em;
+      list-style: none; }
+      .pushy-content li a {
+        font-size: 1em; }
+    .pushy-content ul {
+      margin: 0;
+      padding: 0; }
+
+  /* Menu Movement */
+  .pushy-left {
+    -webkit-transform: translate3d(-400px, 0, 0);
+    -ms-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0); }
+
+  .pushy-open-left #container,
+  .pushy-open-left .push {
+    -webkit-transform: translate3d(400px, 0, 0);
+    -ms-transform: translate3d(400px, 0, 0);
+    transform: translate3d(400px, 0, 0); }
+
+  .pushy-right {
+    -webkit-transform: translate3d(400px, 0, 0);
+    -ms-transform: translate3d(400px, 0, 0);
+    transform: translate3d(400px, 0, 0); }
+
+  .pushy-open-right #container,
+  .pushy-open-right .push {
+    -webkit-transform: translate3d(-400px, 0, 0);
+    -ms-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0); }
+
+  .pushy-open-left .pushy,
+  .pushy-open-right .pushy {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .pushy-open-left .pushy-content,
+  .pushy-open-right .pushy-content {
+    visibility: visible; }
+
+  /* Menu Transitions */
+  #container,
+  .pushy,
+  .push {
+    transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+  .pushy-content {
+    transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+  /* Site Overlay */
+  .site-overlay {
+    display: none; }
+
+  .pushy-open-left .site-overlay,
+  .pushy-open-right .site-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-animation: fade 500ms;
+    animation: fade 500ms; }
+
+  @keyframes fade {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  @-webkit-keyframes fade {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  /* Submenu Appearance */
+  .pushy-submenu {
+    /* Submenu Buttons */
+    /* Submenu Icon */ }
+    .pushy-submenu ul {
+      padding-left: 15px;
+      transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out; }
+      .pushy-submenu ul .pushy-link {
+        transition: opacity 0.2s ease-in-out; }
+    .pushy-submenu button {
+      width: 100%;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      text-align: left;
+      background: transparent;
+      border: 0; }
+      .pushy-submenu button:hover {
+        color: #FFF; }
+    .pushy-submenu > a,
+    .pushy-submenu > button {
+      position: relative; }
+    .pushy-submenu > a::after,
+    .pushy-submenu > button::after {
+      content: '';
+      display: block;
+      height: 11px;
+      width: 8px;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      background: url("../img/arrow.svg") no-repeat;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      transition: transform 0.2s; }
+
+  /* Submenu Movement */
+  .pushy-submenu-closed ul {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+  .pushy-submenu-closed .pushy-link {
+    opacity: 0; }
+
+  .pushy-submenu-open {
+    /* Submenu Icon */ }
+    .pushy-submenu-open ul {
+      max-height: 1000px;
+      visibility: visible; }
+    .pushy-submenu-open .pushy-link {
+      opacity: 1; }
+    .pushy-submenu-open a::after,
+    .pushy-submenu-open button::after {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+      transform: translateY(-50%) rotate(90deg); } }
+@media screen and (min-width: 1700px) and (max-width: 2500px) {
+  #container-origine {
+    margin-top: 8%; }
+
+  #parfums-origine {
+    width: 30%; }
+
+  #image-background-hesperides {
+    height: 1000px; }
+
+  .images-parfumsjh {
+    width: 50%; }
+
+  #div2-jh img {
+    height: 500px; }
+
+  #img-accueil-etoffe {
+    height: 1000px; }
+
+  .images-parfums-etoffe {
+    width: 30%;
+    margin-top: -5%;
+    margin-left: 5%; }
+
+  .pres-etoffe {
+    margin-left: 20%;
+    margin-top: 1%; } }
+@media screen and (max-width: 767px) {
+  nav li a {
+    font-size: 1em; }
+
+  p {
+    font-size: 1.2em; }
+
+  header {
+    z-index: 99999;
+    height: 80px;
+    padding-top: 10px; }
+    header #logo_JDF {
+      width: 65%; }
+    header .header-right-parts {
+      width: initial; }
+    header .trad-site {
+      float: right;
+      padding: 1%;
+      font-size: 0.8em; }
+
+  footer {
+    font-size: 0.5em; }
+    footer .form-group input {
+      font-size: 1.5em; }
+    footer nav {
+      margin-top: 0px; }
+    footer #divFooterRsMobile {
+      margin-top: 3%; }
+      footer #divFooterRsMobile .paraRS {
+        border: 1.5px solid #FFF;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 1s;
+        cursor: pointer; }
+        footer #divFooterRsMobile .paraRS a {
+          webkit-text-fill-color: #FFF; }
+        footer #divFooterRsMobile .paraRS i {
+          color: #FFF;
+          font-size: 1em; }
+      footer #divFooterRsMobile .paraRS:hover {
+        background-color: white; }
+        footer #divFooterRsMobile .paraRS:hover i {
+          color: #000000; }
+
+  .site-footer nav ul li a {
+    font-size: 1em; }
+
+  .sur-sousfooter {
+    font-size: 1em; }
+
+  #sous-footer {
+    margin-top: -3%;
+    font-size: 0.5em;
+    height: 30px; }
+    #sous-footer h5 {
+      font-size: 0.8em; }
+
+  /* Accueil */
+  #image-background-accueil {
+    height: 650px; }
+
+  #entete-accueil {
+    position: relative;
+    width: 100%;
+    top: 200px;
+    left: 5%; }
+    #entete-accueil h3 {
+      text-align: center; }
+    #entete-accueil a {
+      margin-left: 25%; }
+
+  #div_event {
+    padding: 5%; }
+    #div_event img {
+      padding: 0; }
+    #div_event #divdediv_event h2 {
+      font-size: 2em;
+      text-align: center; }
+    #div_event #divdediv_event p {
+      font-size: 1em; }
+
+  #divminarticle {
+    padding-top: 5%;
+    padding-bottom: 5%; }
+    #divminarticle h1 {
+      font-size: 3em; }
+    #divminarticle p {
+      font-size: 1em; }
+
+  #divCaseUne p {
+    font-size: 14px; }
+
+  #div-premiere {
+    height: 60vh;
+    padding: 5%;
+    font-size: 1em;
+    line-height: 35px; }
+
+  .parallax {
+    /* The image used */
+    background-image: url("../../img/flacons.jpg");
+    /* Set a specific height */
+    height: 600px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: 20%;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+  #div-deuxieme {
+    background-color: #F2F2F2;
+    font-size: 1.3em; }
+    #div-deuxieme p {
+      padding: 5%;
+      margin-top: 0;
+      font-size: 1em; }
+    #div-deuxieme img {
+      width: 100%;
+      margin-bottom: 3%; }
+
+  #div-troisieme {
+    font-size: 1em; }
+    #div-troisieme p {
+      padding: 5%;
+      margin-top: 0px;
+      line-height: 30px; }
+
+  #div-quatrieme {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0; }
+    #div-quatrieme div {
+      width: 100%; }
+
+  .divContentButton .divButtonsCollections a {
+    font-size: 0.7em; }
+
+  .justine-accueil p {
+    font-size: 1em; }
+
+  /* Origine */
+  #accueil-origine {
+    background-image: url("../../img/couverture.jpg");
+    position: relative;
+    height: 600px; }
+    #accueil-origine img {
+      position: absolute;
+      top: 30%;
+      left: 15%; }
+
+  #origine-div2 {
+    background-image: none; }
+
+  #origine-div1 img {
+    margin-bottom: 5%; }
+
+  #origine-div2 img {
+    margin-bottom: 5%; }
+
+  #parfums-origine {
+    width: 100%;
+    max-width: 350px;
+    margin: 0;
+    margin-left: 10%;
+    padding: 0; }
+
+  #barre-titre img {
+    width: 100%; }
+
+  .div-pyramide {
+    margin-bottom: 3em; }
+
+  .div-pyramide-mobile {
+    height: 450px;
+    padding: 50px;
+    padding-top: 10px;
+    border-radius: 10px 10px 10px;
+    text-align: center; }
+    .div-pyramide-mobile p {
+      font-size: 1.5em;
+      line-height: 1.5em; }
+
+  .desc-parfums-origine img {
+    width: 30%; }
+
+  /* Hesperides */
+  .conteneur-images {
+    background-repeat: no-repeat;
+    height: 40em; }
+
+  #image-background-hesperides {
+    height: 600px; }
+
+  #hesperides-div1 h1 {
+    text-align: center; }
+  #hesperides-div1 p {
+    text-align: justify; }
+
+  #hesperides-div2 {
+    margin-top: 5%; }
+
+  .pyramide-jh {
+    margin-top: 10%; }
+
+  .images-parfumsjh {
+    margin-top: 4em; }
+
+  /* Etoffes */
+  /* Equipe */
+  #equipe-entete h1 {
+    font-size: 1.4em;
+    position: absolute;
+    right: 1em; }
+
+  #div1-equipe p {
+    font-size: 1.5em; }
+  #div1-equipe h2 {
+    font-size: 2em; }
+
+  #div2-equipe p {
+    margin-top: 5%;
+    padding: 2%;
+    font-size: 1.5em; }
+
+  #div3-equipe p {
+    margin-top: 5%;
+    padding: 2%;
+    font-size: 1.5em; }
+
+  #div4-equipe p {
+    margin-top: 5%;
+    padding: 2%;
+    font-size: 1.5em; }
+
+  /* Parfumeur */
+  #presentation-parfumeur {
+    left: 0;
+    top: 15%;
+    padding: 5%; }
+    #presentation-parfumeur h1 {
+      font-size: 3em; }
+    #presentation-parfumeur p {
+      font-size: 1.5em; }
+
+  #image-background-parfumeur {
+    height: 570px; }
+
+  #div2-parfumeur img {
+    margin: 0; }
+
+  /* Atelier */
+  #atelier-entete h1 {
+    z-index: 1;
+    position: absolute;
+    font-family: Vladimir;
+    font-size: 2em;
+    color: white;
+    top: 2.5em;
+    left: 1em; }
+
+  #atelier-content p {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 1.5em; }
+
+  #div1-atelier img {
+    margin-top: 0; }
+
+  #images-rondes-atelier {
+    margin-top: -3em; }
+
+  /* Parfumeur */
+  #marque-aujourdhui #titre-marque {
+    font-size: 3em; }
+  #marque-aujourdhui p {
+    font-size: 1.5em; }
+  #marque-aujourdhui #div1-marque p {
+    font-size: 1.5em; }
+
+  /* 1920 */
+  #accueil-1920 {
+    height: 150px; }
+
+  #image-1920-mobile {
+    margin-top: 5%; }
+    #image-1920-mobile img {
+      padding: 0; }
+
+  .flacon-1920 {
+    width: 100% !important;
+    max-height: 1000px !important; }
+
+  /* Etoffes */
+  #div2-etoffes {
+    background-image: none; }
+    #div2-etoffes #divde2-etoffes {
+      margin: 0; }
+
+  .etoffes-parfums {
+    height: 600px; }
+
+  .images-parfums-etoffe {
+    width: 100%;
+    margin: 0; }
+
+  .mobile-etoffe-parfums {
+    text-align: center;
+    border-radius: 10px 10px 10px;
+    color: white;
+    margin-top: 2%;
+    font-size: 1.5em;
+    padding: 5%;
+    margin-bottom: 5%; }
+
+  #id-color-etoffe-dentelle {
+    background-color: #83BFCA; }
+
+  #id-color-etoffe-cuir {
+    background-color: #EFD3A4; }
+
+  #id-color-etoffe-tweed {
+    background-color: #709385; }
+
+  #id-color-etoffe-soie {
+    background-color: #DF91BB; }
+
+  #id-color-etoffe-velour {
+    background-color: #B4B9CF; }
+
+  /* Contact */
+  #image-entete-contact {
+    height: 300px;
+    width: 100%; }
+
+  #contact-entete h1 {
+    font-size: 3em;
+    top: 2em;
+    left: 1em; }
+
+  /* Point de vente */
+  .tempo-construc p {
+    font-size: 0.45em; }
+
+  /* Administrateur */
+  /* ADMIN-TEMPLATE */
+  #nav-admin {
+    width: 100%;
+    text-align: center;
+    margin-top: 16%;
+    position: initial; }
+    #nav-admin li {
+      margin-left: 0; }
+
+  /* POST-INDEX */
+  #content-admin p {
+    text-align: center; }
+
+  /* POST-ARTICLE */
+  #div_button_article_index {
+    flex-wrap: wrap; }
+
+  /* POST-EVENT */
+  #div_posts_event {
+    text-align: center; }
+    #div_posts_event div {
+      text-align: center; }
+
+  /* PRODUCT-BOUTIQUE */
+  #div_products-boutique {
+    margin-top: 0; }
+    #div_products-boutique div {
+      padding: 20px; }
+    #div_products-boutique input {
+      width: 100%; }
+    #div_products-boutique h3 {
+      text-align: center;
+      margin-bottom: 5%; }
+
+  /* POST-IMAGES */
+  #div-img-index-ajout {
+    margin-top: 0;
+    padding: 0; }
+
+  /*Pushy*/
+  /*! Pushy - v1.1.0 - 2017-1-30
+  * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+  * https://github.com/christophery/pushy/
+  * by Christopher Yee */
+  /* Menu Appearance */
+  .pushy {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    z-index: 9999;
+    background: #191918;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    /* enables momentum scrolling in iOS overflow elements */ }
+    .pushy a {
+      display: block;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      text-decoration: none; }
+    .pushy a:hover {
+      color: #FFF; }
+    .pushy ul:first-child {
+      margin-top: 10px; }
+    .pushy.pushy-left {
+      left: 0; }
+    .pushy.pushy-right {
+      right: 0; }
+
+  .pushy-content {
+    visibility: hidden; }
+    .pushy-content li {
+      font-size: 1em;
+      list-style: none; }
+      .pushy-content li a {
+        font-size: 1em; }
+    .pushy-content ul {
+      margin: 0;
+      padding: 0; }
+
+  /* Menu Movement */
+  .pushy-left {
+    -webkit-transform: translate3d(-250px, 0, 0);
+    -ms-transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0); }
+
+  .pushy-open-left #container,
+  .pushy-open-left .push {
+    -webkit-transform: translate3d(250px, 0, 0);
+    -ms-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0); }
+
+  .pushy-right {
+    -webkit-transform: translate3d(250px, 0, 0);
+    -ms-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0); }
+
+  .pushy-open-right #container,
+  .pushy-open-right .push {
+    -webkit-transform: translate3d(-250px, 0, 0);
+    -ms-transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0); }
+
+  .pushy-open-left .pushy,
+  .pushy-open-right .pushy {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .pushy-open-left .pushy-content,
+  .pushy-open-right .pushy-content {
+    visibility: visible; }
+
+  /* Menu Transitions */
+  #container,
+  .pushy,
+  .push {
+    transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+  .pushy-content {
+    transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+  /* Site Overlay */
+  .site-overlay {
+    display: none; }
+
+  .pushy-open-left .site-overlay,
+  .pushy-open-right .site-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-animation: fade 500ms;
+    animation: fade 500ms; }
+
+  @keyframes fade {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  @-webkit-keyframes fade {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  /* Submenu Appearance */
+  .pushy-submenu {
+    /* Submenu Buttons */
+    /* Submenu Icon */ }
+    .pushy-submenu ul {
+      padding-left: 15px;
+      transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out; }
+      .pushy-submenu ul .pushy-link {
+        transition: opacity 0.2s ease-in-out; }
+    .pushy-submenu button {
+      width: 100%;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      text-align: left;
+      background: transparent;
+      border: 0; }
+      .pushy-submenu button:hover {
+        color: #FFF; }
+    .pushy-submenu > a,
+    .pushy-submenu > button {
+      position: relative; }
+    .pushy-submenu > a::after,
+    .pushy-submenu > button::after {
+      content: '';
+      display: block;
+      height: 11px;
+      width: 8px;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      background: url("../img/arrow.svg") no-repeat;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      transition: transform 0.2s; }
+
+  /* Submenu Movement */
+  .pushy-submenu-closed ul {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+  .pushy-submenu-closed .pushy-link {
+    opacity: 0; }
+
+  .pushy-submenu-open {
+    /* Submenu Icon */ }
+    .pushy-submenu-open ul {
+      max-height: 1000px;
+      visibility: visible; }
+    .pushy-submenu-open .pushy-link {
+      opacity: 1; }
+    .pushy-submenu-open a::after,
+    .pushy-submenu-open button::after {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+      transform: translateY(-50%) rotate(90deg); }
+
+  /*BOUTIQUE*/
+  .parfums-boutique {
+    padding: 0;
+    margin: 0; }
+
+  #barre-top p {
+    font-size: 0.5em;
+    text-align: center; }
+
+  #barre-icone-accueil {
+    padding: 0;
+    margin: 0;
+    margin-top: 10%; }
+    #barre-icone-accueil .iconebarre {
+      padding: 0;
+      margin: 0; }
+      #barre-icone-accueil .iconebarre img {
+        width: 50%;
+        padding-top: 0;
+        margin-left: 25%;
+        margin-bottom: 2%;
+        padding: 5%; }
+      #barre-icone-accueil .iconebarre p {
+        text-align: center;
+        font-size: 0.5em;
+        margin-bottom: 2%; }
+
+  #content-parfum-mobile {
+    margin-top: 5%;
+    margin-bottom: 5%; }
+    #content-parfum-mobile p {
+      text-align: justify; }
+    #content-parfum-mobile img {
+      margin-top: 3%;
+      box-shadow: 5px 5px 20px grey; }
+    #content-parfum-mobile h2 {
+      font-size: 20px; }
+    #content-parfum-mobile #micro-img-product {
+      margin-bottom: 5%; }
+      #content-parfum-mobile #micro-img-product img {
+        margin-right: 2%; }
+    #content-parfum-mobile #buy-it {
+      background-color: #9F663B;
+      color: white;
+      width: 170px;
+      height: 30px;
+      font-size: 1.1em;
+      border: none;
+      text-align: center;
+      border-radius: 50px;
+      margin-left: 9vw;
+      margin-top: 8%;
+      box-shadow: 2px 2px 5px 1px grey; }
+
+  #content-boutique #etape-paiement {
+    width: 100%;
+    margin-left: 0; }
+  #content-boutique #panier {
+    width: 100%;
+    margin-left: 0; }
+    #content-boutique #panier img {
+      width: 100%; }
+
+  #form_cart-content {
+    display: block;
+    margin-left: 0; }
+    #form_cart-content #form_cart-left #form_adresse .form-group {
+      width: 25em; }
+    #form_cart-content #table_cart-finalisation {
+      width: 100%;
+      margin-left: 0; }
+
+  .modal {
+    top: 50px; }
+
+  .modal-content {
+    margin-left: 0;
+    width: 100vw; }
+    .modal-content .titre-modal {
+      font-size: 1.5em; }
+
+  .modal-body {
+    border-radius: 5px;
+    padding: 2px 16px; }
+    .modal-body .contain-btn-popup {
+      margin-top: 5%; }
+      .modal-body .contain-btn-popup .button-div-popup {
+        background-color: #9F663B;
+        color: white;
+        padding-top: 5%;
+        width: 150px;
+        height: 50px;
+        font-size: 1.1em;
+        border: none;
+        text-align: center;
+        border-radius: 50px;
+        box-shadow: 2px 2px 5px 1px grey; }
+
+  .boutique-header #barre-top .btn-retour-vitrine {
+    line-height: 13px !important; }
+
+  .content-index-boutique {
+    margin: 0;
+    padding: 0; }
+    .content-index-boutique .div-img-boutccueil {
+      padding: 0; }
+      .content-index-boutique .div-img-boutccueil img {
+        padding: 0;
+        filter: opacity(30%); }
+      .content-index-boutique .div-img-boutccueil p {
+        display: block;
+        line-height: 1em;
+        top: 25%;
+        left: 15%;
+        text-align: center;
+        font-family: Century;
+        font-size: 1em;
+        opacity: 1; }
+        .content-index-boutique .div-img-boutccueil p .span-titre {
+          font-size: 1.5em;
+          font-family: Vladimir;
+          line-height: 15px; }
+        .content-index-boutique .div-img-boutccueil p .span-intitu {
+          line-height: 70px; }
+    .content-index-boutique .accueil-boutique-img {
+      margin: 0;
+      padding: 0; }
+      .content-index-boutique .accueil-boutique-img .accueil-boutique-imgsub {
+        margin: 0;
+        padding: 0; } }
+
+/*# sourceMappingURL=style.css.map */

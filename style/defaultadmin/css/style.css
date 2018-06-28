@@ -1,0 +1,1256 @@
+@font-face {
+  font-family: Century;
+  src: url("../../font/911Fonts.com_CenturyGothicRegular__-_911fonts.com-fonts-mhpY.ttf"); }
+@font-face {
+  font-family: Vladimir;
+  src: url("../../font/BellGothicStd-Bold.otf"); }
+@font-face {
+  font-family: Justus Roman;
+  font-style: normal;
+  font-weight: normal;
+  src: local("Justus Roman"), url("Justus-Roman.woff") format("woff"); }
+.no-padding > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0; }
+
+.bordered {
+  border: 1px solid red; }
+
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0; }
+
+p {
+  font-family: Century;
+  font-size: 3vh; }
+
+#content {
+  padding: 0; }
+
+.tempo-construc {
+  margin-top: 30%;
+  margin-bottom: 30%;
+  height: 5em;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  background-color: #40A463;
+  padding: 3%; }
+
+.content-admin {
+  background-color: #BFBFBF; }
+  .content-admin #nav-admin {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    text-align: center;
+    background-color: white;
+    font-family: Century; }
+    .content-admin #nav-admin a {
+      text-decoration: none;
+      color: #404040; }
+    .content-admin #nav-admin li {
+      padding-top: 8%;
+      padding-bottom: 8%;
+      font-size: 1em;
+      min-height: 80px;
+      font-family: 'Roboto', sans-serif; }
+      .content-admin #nav-admin li a {
+        color: #404040;
+        text-decoration: none; }
+    .content-admin #nav-admin .logoadmin {
+      position: absolute;
+      left: 5%;
+      width: 10%; }
+    .content-admin #nav-admin .logoplay1, .content-admin #nav-admin .logoplay2, .content-admin #nav-admin .logoplay3 {
+      position: absolute;
+      right: 8%;
+      width: 5%; }
+    .content-admin #nav-admin ul {
+      background-color: #E5E5E5;
+      width: 100%;
+      padding-left: 0; }
+      .content-admin #nav-admin ul li {
+        text-decoration: none;
+        color: #404040; }
+      .content-admin #nav-admin ul li:hover {
+        background-color: #595959;
+        color: white; }
+        .content-admin #nav-admin ul li:hover a {
+          color: white; }
+    .content-admin #nav-admin li:hover {
+      background-color: #F2F2F2;
+      cursor: pointer; }
+    .content-admin #nav-admin li:active {
+      background-color: #F2F2F2; }
+    .content-admin #nav-admin li:visited {
+      background-color: #F2F2F2; }
+
+#div_products-boutique {
+  margin-top: 100px; }
+
+#div-img-index-ajout {
+  margin-top: 100px; }
+
+.content-admin-dash {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  margin-left: 15%;
+  height: 100vh;
+  padding: 2%;
+  padding-top: 0; }
+  .content-admin-dash h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif; }
+  .content-admin-dash .dernier-articles {
+    overflow-y: scroll;
+    background-color: #F2F2F2;
+    width: 25vw;
+    height: 40vh; }
+    .content-admin-dash .dernier-articles h2 {
+      padding: 0;
+      margin: 0;
+      height: 5vh;
+      background-color: #404040;
+      color: #F2F2F2;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2em;
+      padding: 1%;
+      padding-left: 2%; }
+    .content-admin-dash .dernier-articles h4 {
+      padding-left: 2%;
+      padding-top: 1%; }
+    .content-admin-dash .dernier-articles .content-article-dashsub {
+      display: flex;
+      justify-content: space-between;
+      padding: 3%; }
+      .content-admin-dash .dernier-articles .content-article-dashsub p {
+        margin-left: 3%; }
+    .content-admin-dash .dernier-articles .content-articles-dash {
+      background-color: white;
+      margin-left: 2%;
+      margin-right: 2%;
+      transition-duration: 0.3s; }
+      .content-admin-dash .dernier-articles .content-articles-dash img {
+        width: 100%; }
+    .content-admin-dash .dernier-articles .content-articles-dash:hover {
+      box-shadow: 3px 3px 3px black;
+      transform: scale(1.01); }
+  .content-admin-dash .dernier-event {
+    overflow-y: scroll;
+    background-color: #F2F2F2;
+    width: 25vw;
+    height: 40vh; }
+    .content-admin-dash .dernier-event h2 {
+      padding: 0;
+      margin: 0;
+      height: 5vh;
+      background-color: #404040;
+      color: #F2F2F2;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2em;
+      padding: 1%;
+      padding-left: 2%; }
+    .content-admin-dash .dernier-event h4 {
+      padding-left: 2%;
+      padding-top: 1%; }
+    .content-admin-dash .dernier-event .content-event-dashsub {
+      display: flex;
+      justify-content: space-between;
+      padding: 3%; }
+      .content-admin-dash .dernier-event .content-event-dashsub p {
+        margin-left: 3%; }
+    .content-admin-dash .dernier-event .content-event-dash {
+      background-color: white;
+      margin-left: 2%;
+      margin-right: 2%;
+      transition-duration: 0.3s; }
+      .content-admin-dash .dernier-event .content-event-dash img {
+        width: 100%; }
+    .content-admin-dash .dernier-event .content-event-dash:hover {
+      box-shadow: 3px 3px 3px black;
+      transform: scale(1.01); }
+  .content-admin-dash .dernier-vente {
+    overflow-y: scroll;
+    background-color: #F2F2F2;
+    width: 25vw;
+    height: 40vh; }
+    .content-admin-dash .dernier-vente h2 {
+      padding: 0;
+      margin: 0;
+      height: 5vh;
+      background-color: #404040;
+      color: #F2F2F2;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2em;
+      padding: 1%;
+      padding-left: 2%; }
+    .content-admin-dash .dernier-vente table {
+      text-align: center; }
+      .content-admin-dash .dernier-vente table td {
+        padding: 2%; }
+      .content-admin-dash .dernier-vente table th {
+        padding: 2%;
+        text-align: center;
+        min-width: 6vw; }
+  .content-admin-dash .analytics {
+    overflow-y: scroll;
+    background-color: #F2F2F2;
+    width: 25vw;
+    height: 40vh; }
+    .content-admin-dash .analytics h2 {
+      padding: 0;
+      margin: 0;
+      height: 5vh;
+      background-color: #404040;
+      color: #F2F2F2;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2em;
+      padding: 1%;
+      padding-left: 2%; }
+  .content-admin-dash .analytics2 {
+    overflow-y: scroll;
+    background-color: #F2F2F2;
+    width: 25vw;
+    height: 40vh; }
+    .content-admin-dash .analytics2 h2 {
+      padding: 0;
+      margin: 0;
+      height: 5vh;
+      background-color: #404040;
+      color: #F2F2F2;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2em;
+      padding: 1%;
+      padding-left: 2%; }
+  .content-admin-dash .analytics3 {
+    overflow-y: scroll;
+    background-color: #F2F2F2;
+    width: 25vw;
+    height: 40vh; }
+    .content-admin-dash .analytics3 h2 {
+      padding: 0;
+      margin: 0;
+      height: 5vh;
+      background-color: #404040;
+      color: #F2F2F2;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2em;
+      padding: 1%;
+      padding-left: 2%; }
+
+@media screen and (min-width: 901px) and (max-width: 1450px) {
+  nav li a {
+    font-size: 1em; }
+
+  #container-origine {
+    margin-top: -150px; }
+
+  #titre-histoire h1 {
+    font-size: 2em; }
+
+  #atelier-content p {
+    font-size: 1.4em; }
+  #atelier-content #div1-atelier img {
+    margin-top: -5.5em; }
+
+  #images-rondes-atelier {
+    margin-top: -8%; }
+
+  #origin-liste {
+    padding-top: 10%;
+    height: 300px; } }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  header .menu-btn {
+    margin-left: 5%;
+    margin-top: 2%; }
+
+  #accueil-origine #img-accueil-origine {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0; }
+
+  #image-background-accueil {
+    height: 80vh; }
+
+  #matieres-premieres {
+    margin-bottom: 3%; }
+
+  /* COLLECTION ORIGINE */
+  #accueil-origine {
+    margin-top: 0;
+    height: 680px; }
+
+  #origine-div1 p, #origine-div2 p {
+    font-size: 1em; }
+
+  #origin-liste {
+    padding-top: 0;
+    height: 0; }
+
+  .div-pyramide {
+    width: 50%;
+    margin-left: 0; }
+
+  #container-origine {
+    margin-top: -50px; }
+
+  /* COLLECTION HESPERIDES */
+  #hesperides-div1 {
+    font-size: 1em;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  #hesperides-div2 {
+    font-size: 1em;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .conteneur-images {
+    background-repeat: no-repeat;
+    height: 50em; }
+
+  #couverture_hesperyde {
+    background-size: initial; }
+
+  #parfum_osiris {
+    background-repeat: repeat-y; }
+
+  /* PARFUMEUR */
+  #div2-parfumeur {
+    padding-left: 0; }
+    #div2-parfumeur img {
+      margin-left: 0; }
+    #div2-parfumeur #div2div1-parfumeur p, #div2-parfumeur #div2div1-parfumeur h3 {
+      margin-left: 4%;
+      padding-right: 4%; }
+
+  #div3-parfumeur img {
+    padding-left: 0; }
+
+  /* MARQUE AUJOURD'HUI */
+  #marque-aujourdhui #marque-auj1 {
+    width: 100%; }
+  #marque-aujourdhui #div1-marque p {
+    padding-left: 0; }
+
+  /* COLLECTION 1920 */
+  #accueil-1920 {
+    height: 400px; }
+
+  /*COLLECTION ETOFFE */
+  #img-accueil-etoffe {
+    height: 600px; }
+
+  #div2-etoffes {
+    height: initial;
+    background-repeat: repeat;
+    margin-bottom: 6%; }
+
+  .etoffes-parfums {
+    background-size: initial; }
+
+  .particular_etoffe {
+    background-size: 100%; }
+
+  .particular-etoffe_2 {
+    background-size: 120%; }
+
+  .images-parfums-etoffe {
+    margin-left: 0; }
+
+  .pres-etoffe {
+    width: 50%;
+    margin-top: 0; }
+
+  /* ADMINISTRATEUR */
+  /*ADMIN-TEMPLATE */
+  #nav-admin {
+    width: auto; }
+
+  /*Pushy*/
+ /*! Pushy - v1.1.0 - 2017-1-30
+* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+* https://github.com/christophery/pushy/
+* by Christopher Yee */
+  /* Menu Appearance */
+  .pushy {
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    top: 0;
+    z-index: 9999;
+    background: #191918;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    /* enables momentum scrolling in iOS overflow elements */ }
+    .pushy a {
+      display: block;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      text-decoration: none; }
+    .pushy a:hover {
+      color: #FFF; }
+    .pushy ul:first-child {
+      margin-top: 10px; }
+    .pushy.pushy-left {
+      left: 0; }
+    .pushy.pushy-right {
+      right: 0; }
+
+  .pushy-content {
+    visibility: hidden; }
+    .pushy-content li {
+      font-size: 1em;
+      list-style: none; }
+      .pushy-content li a {
+        font-size: 1em; }
+    .pushy-content ul {
+      margin: 0;
+      padding: 0; }
+
+  /* Menu Movement */
+  .pushy-left {
+    -webkit-transform: translate3d(-400px, 0, 0);
+    -ms-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0); }
+
+  .pushy-open-left #container,
+  .pushy-open-left .push {
+    -webkit-transform: translate3d(400px, 0, 0);
+    -ms-transform: translate3d(400px, 0, 0);
+    transform: translate3d(400px, 0, 0); }
+
+  .pushy-right {
+    -webkit-transform: translate3d(400px, 0, 0);
+    -ms-transform: translate3d(400px, 0, 0);
+    transform: translate3d(400px, 0, 0); }
+
+  .pushy-open-right #container,
+  .pushy-open-right .push {
+    -webkit-transform: translate3d(-400px, 0, 0);
+    -ms-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0); }
+
+  .pushy-open-left .pushy,
+  .pushy-open-right .pushy {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .pushy-open-left .pushy-content,
+  .pushy-open-right .pushy-content {
+    visibility: visible; }
+
+  /* Menu Transitions */
+  #container,
+  .pushy,
+  .push {
+    transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+  .pushy-content {
+    transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+  /* Site Overlay */
+  .site-overlay {
+    display: none; }
+
+  .pushy-open-left .site-overlay,
+  .pushy-open-right .site-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-animation: fade 500ms;
+    animation: fade 500ms; }
+
+  @keyframes fade {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  @-webkit-keyframes fade {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  /* Submenu Appearance */
+  .pushy-submenu {
+    /* Submenu Buttons */
+    /* Submenu Icon */ }
+    .pushy-submenu ul {
+      padding-left: 15px;
+      transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out; }
+      .pushy-submenu ul .pushy-link {
+        transition: opacity 0.2s ease-in-out; }
+    .pushy-submenu button {
+      width: 100%;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      text-align: left;
+      background: transparent;
+      border: 0; }
+      .pushy-submenu button:hover {
+        color: #FFF; }
+    .pushy-submenu > a,
+    .pushy-submenu > button {
+      position: relative; }
+    .pushy-submenu > a::after,
+    .pushy-submenu > button::after {
+      content: '';
+      display: block;
+      height: 11px;
+      width: 8px;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      background: url("../img/arrow.svg") no-repeat;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      transition: transform 0.2s; }
+
+  /* Submenu Movement */
+  .pushy-submenu-closed ul {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+  .pushy-submenu-closed .pushy-link {
+    opacity: 0; }
+
+  .pushy-submenu-open {
+    /* Submenu Icon */ }
+    .pushy-submenu-open ul {
+      max-height: 1000px;
+      visibility: visible; }
+    .pushy-submenu-open .pushy-link {
+      opacity: 1; }
+    .pushy-submenu-open a::after,
+    .pushy-submenu-open button::after {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+      transform: translateY(-50%) rotate(90deg); } }
+@media screen and (min-width: 1700px) and (max-width: 2500px) {
+  #container-origine {
+    margin-top: 8%; }
+
+  #parfums-origine {
+    width: 30%; }
+
+  #image-background-hesperides {
+    height: 1000px; }
+
+  .images-parfumsjh {
+    width: 50%; }
+
+  #div2-jh img {
+    height: 500px; }
+
+  #img-accueil-etoffe {
+    height: 1000px; }
+
+  .images-parfums-etoffe {
+    width: 30%;
+    margin-top: -5%;
+    margin-left: 5%; }
+
+  .pres-etoffe {
+    margin-left: 20%;
+    margin-top: 1%; } }
+@media screen and (max-width: 767px) {
+  nav li a {
+    font-size: 1em; }
+
+  p {
+    font-size: 1.2em; }
+
+  header {
+    z-index: 99999;
+    height: 80px;
+    padding-top: 10px; }
+    header #logo_JDF {
+      width: 65%; }
+    header .header-right-parts {
+      width: initial; }
+    header .trad-site {
+      float: right;
+      padding: 1%;
+      font-size: 0.8em; }
+
+  footer {
+    font-size: 0.5em; }
+    footer .form-group input {
+      font-size: 1.5em; }
+    footer nav {
+      margin-top: 0px; }
+    footer #divFooterRsMobile {
+      margin-top: 3%; }
+      footer #divFooterRsMobile .paraRS {
+        border: 1.5px solid #FFF;
+        width: 5vh;
+        height: 5vh;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 1s;
+        cursor: pointer; }
+        footer #divFooterRsMobile .paraRS a {
+          webkit-text-fill-color: #FFF; }
+        footer #divFooterRsMobile .paraRS i {
+          color: #FFF;
+          font-size: 1em; }
+      footer #divFooterRsMobile .paraRS:hover {
+        background-color: white; }
+        footer #divFooterRsMobile .paraRS:hover i {
+          color: #000000; }
+
+  .site-footer nav ul li a {
+    font-size: 1em; }
+
+  .sur-sousfooter {
+    font-size: 1em; }
+
+  #sous-footer {
+    margin-top: -3%;
+    font-size: 0.5em;
+    height: 30px; }
+    #sous-footer h5 {
+      font-size: 0.8em; }
+
+  /* Accueil */
+  #image-background-accueil {
+    height: 650px; }
+
+  #entete-accueil {
+    position: relative;
+    width: 100%;
+    top: 200px;
+    left: 5%; }
+    #entete-accueil h3 {
+      text-align: center; }
+    #entete-accueil a {
+      margin-left: 25%; }
+
+  #div_event {
+    padding: 5%; }
+    #div_event img {
+      padding: 0; }
+    #div_event #divdediv_event h2 {
+      font-size: 2em;
+      text-align: center; }
+    #div_event #divdediv_event p {
+      font-size: 1em; }
+
+  #divminarticle {
+    padding-top: 5%;
+    padding-bottom: 5%; }
+    #divminarticle h1 {
+      font-size: 3em; }
+    #divminarticle p {
+      font-size: 1em; }
+
+  #divCaseUne p {
+    font-size: 14px; }
+
+  #div-premiere {
+    height: 60vh;
+    padding: 5%;
+    font-size: 1em;
+    line-height: 35px; }
+
+  .parallax {
+    /* The image used */
+    background-image: url("../../img/flacons.jpg");
+    /* Set a specific height */
+    height: 600px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: 20%;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+  #div-deuxieme {
+    background-color: #F2F2F2;
+    font-size: 1.3em; }
+    #div-deuxieme p {
+      padding: 5%;
+      margin-top: 0;
+      font-size: 1em; }
+    #div-deuxieme img {
+      width: 100%;
+      margin-bottom: 3%; }
+
+  #div-troisieme {
+    font-size: 1em; }
+    #div-troisieme p {
+      padding: 5%;
+      margin-top: 0px;
+      line-height: 30px; }
+
+  #div-quatrieme {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0; }
+    #div-quatrieme div {
+      width: 100%; }
+
+  .divContentButton .divButtonsCollections a {
+    font-size: 0.7em; }
+
+  .justine-accueil p {
+    font-size: 1em; }
+
+  /* Origine */
+  #accueil-origine {
+    background-image: url("../../img/couverture.jpg");
+    position: relative;
+    height: 600px; }
+    #accueil-origine img {
+      position: absolute;
+      top: 30%;
+      left: 15%; }
+
+  #origine-div2 {
+    background-image: none; }
+
+  #origine-div1 img {
+    margin-bottom: 5%; }
+
+  #origine-div2 img {
+    margin-bottom: 5%; }
+
+  #parfums-origine {
+    width: 100%;
+    max-width: 350px;
+    margin: 0;
+    margin-left: 10%;
+    padding: 0; }
+
+  #barre-titre img {
+    width: 100%; }
+
+  .div-pyramide {
+    margin-bottom: 3em; }
+
+  .div-pyramide-mobile {
+    height: 450px;
+    padding: 50px;
+    padding-top: 10px;
+    border-radius: 10px 10px 10px;
+    text-align: center; }
+    .div-pyramide-mobile p {
+      font-size: 1.5em;
+      line-height: 1.5em; }
+
+  .desc-parfums-origine img {
+    width: 30%; }
+
+  /* Hesperides */
+  .conteneur-images {
+    background-repeat: no-repeat;
+    height: 40em; }
+
+  #image-background-hesperides {
+    height: 600px; }
+
+  #hesperides-div1 h1 {
+    text-align: center; }
+  #hesperides-div1 p {
+    text-align: justify; }
+
+  #hesperides-div2 {
+    margin-top: 5%; }
+
+  .pyramide-jh {
+    margin-top: 10%; }
+
+  .images-parfumsjh {
+    margin-top: 4em; }
+
+  /* Etoffes */
+  /* Equipe */
+  #equipe-entete h1 {
+    font-size: 1.4em;
+    position: absolute;
+    right: 1em; }
+
+  #div1-equipe p {
+    font-size: 1.5em; }
+  #div1-equipe h2 {
+    font-size: 2em; }
+
+  #div2-equipe p {
+    margin-top: 5%;
+    padding: 2%;
+    font-size: 1.5em; }
+
+  #div3-equipe p {
+    margin-top: 5%;
+    padding: 2%;
+    font-size: 1.5em; }
+
+  #div4-equipe p {
+    margin-top: 5%;
+    padding: 2%;
+    font-size: 1.5em; }
+
+  /* Parfumeur */
+  #presentation-parfumeur {
+    left: 0;
+    top: 15%;
+    padding: 5%; }
+    #presentation-parfumeur h1 {
+      font-size: 3em; }
+    #presentation-parfumeur p {
+      font-size: 1.5em; }
+
+  #image-background-parfumeur {
+    height: 570px; }
+
+  #div2-parfumeur img {
+    margin: 0; }
+
+  /* Atelier */
+  #atelier-entete h1 {
+    z-index: 1;
+    position: absolute;
+    font-family: Vladimir;
+    font-size: 2em;
+    color: white;
+    top: 2.5em;
+    left: 1em; }
+
+  #atelier-content p {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 1.5em; }
+
+  #div1-atelier img {
+    margin-top: 0; }
+
+  #images-rondes-atelier {
+    margin-top: -3em; }
+
+  /* Parfumeur */
+  #marque-aujourdhui #titre-marque {
+    font-size: 3em; }
+  #marque-aujourdhui p {
+    font-size: 1.5em; }
+  #marque-aujourdhui #div1-marque p {
+    font-size: 1.5em; }
+
+  /* 1920 */
+  #accueil-1920 {
+    height: 150px; }
+
+  #image-1920-mobile {
+    margin-top: 5%; }
+    #image-1920-mobile img {
+      padding: 0; }
+
+  .flacon-1920 {
+    width: 100% !important;
+    max-height: 1000px !important; }
+
+  /* Etoffes */
+  #div2-etoffes {
+    background-image: none; }
+    #div2-etoffes #divde2-etoffes {
+      margin: 0; }
+
+  .etoffes-parfums {
+    height: 600px; }
+
+  .images-parfums-etoffe {
+    width: 100%;
+    margin: 0; }
+
+  .mobile-etoffe-parfums {
+    text-align: center;
+    border-radius: 10px 10px 10px;
+    color: white;
+    margin-top: 2%;
+    font-size: 1.5em;
+    padding: 5%;
+    margin-bottom: 5%; }
+
+  #id-color-etoffe-dentelle {
+    background-color: #83BFCA; }
+
+  #id-color-etoffe-cuir {
+    background-color: #EFD3A4; }
+
+  #id-color-etoffe-tweed {
+    background-color: #709385; }
+
+  #id-color-etoffe-soie {
+    background-color: #DF91BB; }
+
+  #id-color-etoffe-velour {
+    background-color: #B4B9CF; }
+
+  /* Contact */
+  #image-entete-contact {
+    height: 300px;
+    width: 100%; }
+
+  #contact-entete h1 {
+    font-size: 3em;
+    top: 2em;
+    left: 1em; }
+
+  /* Point de vente */
+  .tempo-construc p {
+    font-size: 0.45em; }
+
+  /* Administrateur */
+  /* ADMIN-TEMPLATE */
+  #nav-admin {
+    width: 100%;
+    text-align: center;
+    margin-top: 16%;
+    position: initial; }
+    #nav-admin li {
+      margin-left: 0; }
+
+  /* POST-INDEX */
+  #content-admin p {
+    text-align: center; }
+
+  /* POST-ARTICLE */
+  #div_button_article_index {
+    flex-wrap: wrap; }
+
+  /* POST-EVENT */
+  #div_posts_event {
+    text-align: center; }
+    #div_posts_event div {
+      text-align: center; }
+
+  /* PRODUCT-BOUTIQUE */
+  #div_products-boutique {
+    margin-top: 0; }
+    #div_products-boutique div {
+      padding: 20px; }
+    #div_products-boutique input {
+      width: 100%; }
+    #div_products-boutique h3 {
+      text-align: center;
+      margin-bottom: 5%; }
+
+  /* POST-IMAGES */
+  #div-img-index-ajout {
+    margin-top: 0;
+    padding: 0; }
+
+  /*Pushy*/
+  /*! Pushy - v1.1.0 - 2017-1-30
+  * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+  * https://github.com/christophery/pushy/
+  * by Christopher Yee */
+  /* Menu Appearance */
+  .pushy {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    z-index: 9999;
+    background: #191918;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    /* enables momentum scrolling in iOS overflow elements */ }
+    .pushy a {
+      display: block;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      text-decoration: none; }
+    .pushy a:hover {
+      color: #FFF; }
+    .pushy ul:first-child {
+      margin-top: 10px; }
+    .pushy.pushy-left {
+      left: 0; }
+    .pushy.pushy-right {
+      right: 0; }
+
+  .pushy-content {
+    visibility: hidden; }
+    .pushy-content li {
+      font-size: 1em;
+      list-style: none; }
+      .pushy-content li a {
+        font-size: 1em; }
+    .pushy-content ul {
+      margin: 0;
+      padding: 0; }
+
+  /* Menu Movement */
+  .pushy-left {
+    -webkit-transform: translate3d(-250px, 0, 0);
+    -ms-transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0); }
+
+  .pushy-open-left #container,
+  .pushy-open-left .push {
+    -webkit-transform: translate3d(250px, 0, 0);
+    -ms-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0); }
+
+  .pushy-right {
+    -webkit-transform: translate3d(250px, 0, 0);
+    -ms-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px, 0, 0); }
+
+  .pushy-open-right #container,
+  .pushy-open-right .push {
+    -webkit-transform: translate3d(-250px, 0, 0);
+    -ms-transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0); }
+
+  .pushy-open-left .pushy,
+  .pushy-open-right .pushy {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  .pushy-open-left .pushy-content,
+  .pushy-open-right .pushy-content {
+    visibility: visible; }
+
+  /* Menu Transitions */
+  #container,
+  .pushy,
+  .push {
+    transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+  .pushy-content {
+    transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99); }
+
+  /* Site Overlay */
+  .site-overlay {
+    display: none; }
+
+  .pushy-open-left .site-overlay,
+  .pushy-open-right .site-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-animation: fade 500ms;
+    animation: fade 500ms; }
+
+  @keyframes fade {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  @-webkit-keyframes fade {
+    0% {
+      opacity: 0; }
+    100% {
+      opacity: 1; } }
+  /* Submenu Appearance */
+  .pushy-submenu {
+    /* Submenu Buttons */
+    /* Submenu Icon */ }
+    .pushy-submenu ul {
+      padding-left: 15px;
+      transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out; }
+      .pushy-submenu ul .pushy-link {
+        transition: opacity 0.2s ease-in-out; }
+    .pushy-submenu button {
+      width: 100%;
+      color: #b3b3b1;
+      padding: 15px 30px;
+      text-align: left;
+      background: transparent;
+      border: 0; }
+      .pushy-submenu button:hover {
+        color: #FFF; }
+    .pushy-submenu > a,
+    .pushy-submenu > button {
+      position: relative; }
+    .pushy-submenu > a::after,
+    .pushy-submenu > button::after {
+      content: '';
+      display: block;
+      height: 11px;
+      width: 8px;
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      background: url("../img/arrow.svg") no-repeat;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      transition: transform 0.2s; }
+
+  /* Submenu Movement */
+  .pushy-submenu-closed ul {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+  .pushy-submenu-closed .pushy-link {
+    opacity: 0; }
+
+  .pushy-submenu-open {
+    /* Submenu Icon */ }
+    .pushy-submenu-open ul {
+      max-height: 1000px;
+      visibility: visible; }
+    .pushy-submenu-open .pushy-link {
+      opacity: 1; }
+    .pushy-submenu-open a::after,
+    .pushy-submenu-open button::after {
+      -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+      transform: translateY(-50%) rotate(90deg); }
+
+  /*BOUTIQUE*/
+  .parfums-boutique {
+    padding: 0;
+    margin: 0; }
+
+  #barre-top p {
+    font-size: 0.5em;
+    text-align: center; }
+
+  #barre-icone-accueil {
+    padding: 0;
+    margin: 0;
+    margin-top: 10%; }
+    #barre-icone-accueil .iconebarre {
+      padding: 0;
+      margin: 0; }
+      #barre-icone-accueil .iconebarre img {
+        width: 50%;
+        padding-top: 0;
+        margin-left: 25%;
+        margin-bottom: 2%;
+        padding: 5%; }
+      #barre-icone-accueil .iconebarre p {
+        text-align: center;
+        font-size: 0.5em;
+        margin-bottom: 2%; }
+
+  #content-parfum-mobile {
+    margin-top: 5%;
+    margin-bottom: 5%; }
+    #content-parfum-mobile p {
+      text-align: justify; }
+    #content-parfum-mobile img {
+      margin-top: 3%;
+      box-shadow: 5px 5px 20px grey; }
+    #content-parfum-mobile h2 {
+      font-size: 20px; }
+    #content-parfum-mobile #micro-img-product {
+      margin-bottom: 5%; }
+      #content-parfum-mobile #micro-img-product img {
+        margin-right: 2%; }
+    #content-parfum-mobile #buy-it {
+      background-color: #9F663B;
+      color: white;
+      width: 170px;
+      height: 30px;
+      font-size: 1.1em;
+      border: none;
+      text-align: center;
+      border-radius: 50px;
+      margin-left: 9vw;
+      margin-top: 8%;
+      box-shadow: 2px 2px 5px 1px grey; }
+
+  #content-boutique #etape-paiement {
+    width: 100%;
+    margin-left: 0; }
+  #content-boutique #panier {
+    width: 100%;
+    margin-left: 0; }
+    #content-boutique #panier img {
+      width: 100%; }
+
+  #form_cart-content {
+    display: block;
+    margin-left: 0; }
+    #form_cart-content #form_cart-left #form_adresse .form-group {
+      width: 25em; }
+    #form_cart-content #table_cart-finalisation {
+      width: 100%;
+      margin-left: 0; }
+
+  .modal {
+    top: 50px; }
+
+  .modal-content {
+    margin-left: 0;
+    width: 100vw; }
+    .modal-content .titre-modal {
+      font-size: 1.5em; }
+
+  .modal-body {
+    border-radius: 5px;
+    padding: 2px 16px; }
+    .modal-body .contain-btn-popup {
+      margin-top: 5%; }
+      .modal-body .contain-btn-popup .button-div-popup {
+        background-color: #9F663B;
+        color: white;
+        padding-top: 5%;
+        width: 150px;
+        height: 50px;
+        font-size: 1.1em;
+        border: none;
+        text-align: center;
+        border-radius: 50px;
+        box-shadow: 2px 2px 5px 1px grey; }
+
+  .boutique-header #barre-top .btn-retour-vitrine {
+    line-height: 13px !important; }
+
+  .content-index-boutique {
+    margin: 0;
+    padding: 0; }
+    .content-index-boutique .div-img-boutccueil {
+      padding: 0; }
+      .content-index-boutique .div-img-boutccueil img {
+        padding: 0;
+        filter: opacity(30%); }
+      .content-index-boutique .div-img-boutccueil p {
+        display: block;
+        line-height: 1em;
+        top: 25%;
+        left: 15%;
+        text-align: center;
+        font-family: Century;
+        font-size: 1em;
+        opacity: 1; }
+        .content-index-boutique .div-img-boutccueil p .span-titre {
+          font-size: 1.5em;
+          font-family: Vladimir;
+          line-height: 15px; }
+        .content-index-boutique .div-img-boutccueil p .span-intitu {
+          line-height: 70px; }
+    .content-index-boutique .accueil-boutique-img {
+      margin: 0;
+      padding: 0; }
+      .content-index-boutique .accueil-boutique-img .accueil-boutique-imgsub {
+        margin: 0;
+        padding: 0; } }
+
+/*# sourceMappingURL=style.css.map */

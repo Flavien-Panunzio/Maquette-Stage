@@ -1,0 +1,20 @@
+.no-padding {
+	padding: 0;
+	margin: 0;
+}
+
+@import '_constant.scss';
+@import '_header.scss';
+@import '_carousel.scss';
+
+
+
+.debug > *, .debug > * > *, .debug > * > * > *, .debug > * > * > * > *, .debug > * > * > * > * > *{
+	border: 1px solid red !important;
+	p, h1, h2, h3, h4, h5, h6, a{
+		color: rgba(35,31,32, 0.3)!important;
+	}
+	img{
+		opacity: 0.3!important;
+	}
+}

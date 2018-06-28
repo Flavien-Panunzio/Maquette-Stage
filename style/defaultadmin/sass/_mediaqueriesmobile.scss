@@ -1,0 +1,950 @@
+@media screen and (max-width: 767px){
+	nav{
+		li a{
+			font-size: 1em;
+		}
+	}
+	p{
+		font-size: 1.2em;
+	}
+	header{
+		z-index: 99999;
+		height: 80px;
+		padding-top: 10px;
+		#logo_JDF{
+			width: 65%;
+		}
+		.header-right-parts{
+			width: initial;
+		}
+		.trad-site{
+			float: right;
+			padding: 1%;
+			font-size: 0.8em;
+		}
+	}
+	footer{
+		font-size: 0.5em;
+		.form-group{
+			input{
+				font-size: 1.5em;
+			}
+		}
+		nav{
+			margin-top: 0px;
+		}
+		#divFooterRsMobile{
+			margin-top: 3%;
+			.paraRS{
+				border: 1.5px solid #FFF;
+				width: 5vh;
+				height: 5vh;
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition-duration: 1s;
+				cursor: pointer;
+				a{
+					webkit-text-fill-color: #FFF;
+				}
+				i{
+					color: #FFF;
+					font-size: 1em;
+				}
+			}
+			.paraRS:hover{
+				background-color: white;
+				i{
+					color: $noir;
+				}
+			}
+		}
+	}
+	.site-footer{
+		nav{
+			ul{
+				li{
+					a{
+						font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+	.sur-sousfooter {
+		font-size: 1em;
+	}
+	#sous-footer{
+		margin-top: -3%;
+		font-size: 0.5em;
+		height: 30px;
+
+		h5{
+			font-size: 0.8em;
+		}
+	}
+
+
+
+	/* Accueil */
+
+	#image-background-accueil{
+		height: 650px;
+	}
+	#entete-accueil{
+		position: relative;
+		width: 100%;
+		top: 200px;
+		left: 5%;
+		h3{
+			text-align: center;
+		}
+		a{
+			margin-left: 25%;
+		}
+	}
+	#div_event{
+		padding: 5%;
+		img{
+			padding: 0;
+		}
+		#divdediv_event{
+			h2{
+				font-size: 2em;
+				text-align: center;
+			}
+			p{
+				font-size: 1em;
+			}
+		}
+	}
+	#divminarticle{
+		padding-top: 5%;
+		padding-bottom: 5%;
+		h1{
+			font-size: 3em;
+		}
+		p{
+			font-size: 1em;
+		}
+	}
+	#divCaseUne{
+		p{
+			font-size: 14px;
+		}
+	}
+	#div-premiere{
+		height: 60vh;
+		padding: 5%;
+		font-size: 1em;
+		line-height: 35px;
+	}
+	.parallax {
+	    /* The image used */
+	    background-image: url("../../img/flacons.jpg");
+
+	   /* Set a specific height */
+	    height: 600px;
+
+	   /* Create the parallax scrolling effect */
+	    background-attachment: fixed;
+	    background-position: 20%;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	}
+	#div-deuxieme{
+		background-color: #F2F2F2;
+		font-size: 1.3em;
+		p{
+			padding: 5%;
+			margin-top: 0;
+			font-size: 1em;
+		}
+		img{
+			width: 100%;
+			margin-bottom: 3%;
+		}
+	}
+	#div-troisieme{
+		font-size: 1em;
+		p{
+			padding: 5%;
+			margin-top: 0px;
+			line-height: 30px;
+		}
+	}
+	#div-quatrieme{
+		flex-direction: column;
+		width: 100%;
+		margin-left: 0;
+		div{
+			width: 100%;
+		}
+	}
+	.divContentButton{
+		.divButtonsCollections{
+			a{
+				font-size: 0.7em;
+			}
+		}
+	}
+	.justine-accueil{
+		p{
+			font-size: 1em;
+		}
+	}
+
+
+
+
+	/* Origine */
+
+	#accueil-origine{
+		background-image: url("../../img/couverture.jpg");
+		position: relative;
+		height: 600px;
+		img{
+			position: absolute;
+			top: 30%;
+			left: 15%;
+		}
+	}
+	#origine-div2{
+		background-image: none;
+	}
+
+	#origine-div1 img{
+	    margin-bottom: 5%;  }
+
+	#origine-div2 img{
+	    margin-bottom: 5%;  }
+
+	#parfums-origine{
+		width: 100%;
+		max-width: 350px;
+		margin: 0;
+		margin-left: 10%;
+		padding: 0;
+	}
+	#barre-titre{
+		img{
+			width: 100%;
+		}
+	}
+	.div-pyramide{
+		margin-bottom: 3em;
+	}
+	.div-pyramide-mobile{
+		height: 450px;
+		padding: 50px;
+		padding-top: 10px;
+		border-radius: 10px 10px 10px;
+		text-align: center;
+		p{
+			font-size: 1.5em;
+			line-height: 1.5em;
+		}
+	}
+	.desc-parfums-origine{
+		img{
+			width: 30%;
+		}
+	}
+
+
+
+
+	/* Hesperides */
+
+	.conteneur-images{
+		background-repeat: no-repeat;
+		height: 40em;
+	}
+	#image-background-hesperides{
+		height: 600px;
+	}
+	#hesperides-div1{
+		h1{
+			text-align: center;
+		}
+		p{
+			text-align: justify;
+		}
+	}
+	#hesperides-div2{
+		margin-top: 5%;
+	}
+	.pyramide-jh{
+		margin-top: 10%;
+	}
+	.images-parfumsjh{
+		margin-top: 4em;
+	}
+
+	/* Etoffes */
+
+
+	/* Equipe */
+
+
+	#equipe-entete{
+		h1{
+			font-size: 1.4em;
+			position: absolute;
+			right: 1em;
+		}
+	}
+	#div1-equipe{
+		p{
+			font-size: 1.5em;
+		}
+		h2{
+			font-size: 2em;
+		}
+	}
+	#div2-equipe{
+		p{
+			margin-top: 5%;
+			padding: 2%;
+			font-size: 1.5em;
+		}
+	}
+	#div3-equipe{
+		p{
+			margin-top: 5%;
+			padding: 2%;
+			font-size: 1.5em;
+		}
+	}
+	#div4-equipe{
+		p{
+			margin-top: 5%;
+			padding: 2%;
+			font-size: 1.5em;
+		}
+	}
+
+
+	/* Parfumeur */
+
+	#presentation-parfumeur{
+		left: 0;
+		top: 15%;
+		padding: 5%;
+		h1{
+			font-size: 3em;
+		}
+		p{
+			font-size: 1.5em;
+		}
+	}
+	#image-background-parfumeur{
+		height: 570px;
+	}
+	#div2-parfumeur{
+		img{
+			margin: 0;
+		}
+	}
+
+
+
+
+	/* Atelier */
+
+	#atelier-entete{
+	    h1{
+	    z-index: 1;
+	    position: absolute;
+	    font-family: Vladimir;
+	    font-size: 2em;
+	    color: white;
+	    top: 2.5em;
+	    left: 1em;
+		}
+	}
+	#atelier-content{
+	    p{
+	        margin-top: 3%;
+	        margin-bottom: 3%;
+	        font-size: 1.5em;
+	    }
+	}
+	#div1-atelier{
+		img{
+			margin-top: 0;
+		}
+	}
+	#images-rondes-atelier{
+	    margin-top: -3em;
+	}
+
+
+
+	/* Parfumeur */
+
+	#marque-aujourdhui{
+		#titre-marque{
+			font-size: 3em;
+		}
+		p{
+			font-size: 1.5em;
+		}
+		#div1-marque{
+			p{
+				font-size: 1.5em;
+			}
+		}
+	}
+
+
+
+	/* 1920 */
+
+	#accueil-1920{
+		height: 150px;
+	}
+	#image-1920-mobile{
+		margin-top: 5%;
+		img{
+			padding: 0;
+		}
+	}
+	.flacon-1920{
+		width: 100% !important;
+		max-height: 1000px !important;
+	}
+
+
+
+	/* Etoffes */
+
+	#div2-etoffes{
+		background-image: none;
+		#divde2-etoffes{
+			margin: 0;
+		}
+	}
+	.etoffes-parfums{
+		height: 600px;
+	}
+	.images-parfums-etoffe{
+		width: 100%;
+		margin: 0;
+	}
+	.mobile-etoffe-parfums{
+		text-align: center;
+		border-radius: 10px 10px 10px;
+		color: white;
+		margin-top: 2%;
+		font-size: 1.5em;
+		padding: 5%;	
+		margin-bottom: 5%;
+	}
+	#id-color-etoffe-dentelle{
+		background-color: #83BFCA;
+	}
+	#id-color-etoffe-cuir{
+		background-color: #EFD3A4;
+	}
+	#id-color-etoffe-tweed{
+		background-color: #709385;
+	}
+	#id-color-etoffe-soie{
+		background-color: #DF91BB;
+	}
+	#id-color-etoffe-velour{
+		background-color: #B4B9CF;
+	}
+
+
+	/* Contact */
+
+	#image-entete-contact{
+		height: 300px;
+		width: 100%;
+	}
+	#contact-entete{
+		h1{
+		    font-size: 3em;
+		    top: 2em;
+		    left: 1em;
+	    }
+	}
+
+	/* Point de vente */
+
+	.tempo-construc{
+		
+		p{
+			font-size: 0.45em;
+		}
+	}
+
+	/* Administrateur */
+		
+		/* ADMIN-TEMPLATE */
+			#nav-admin{
+				width: 100%;
+				text-align: center;
+				margin-top: 16%;
+				position: initial;
+				li{
+					margin-left: 0;
+				}
+			}
+		
+		/* POST-INDEX */
+
+		#content-admin{
+			p{
+				text-align: center;
+			}
+		}
+
+		/* POST-ARTICLE */
+
+		#div_button_article_index{
+			flex-wrap: wrap;
+		}
+
+		/* POST-EVENT */
+
+		#div_posts_event{
+			text-align: center;
+			div{
+				text-align: center;
+			}
+		}
+
+		/* PRODUCT-BOUTIQUE */
+
+		#div_products-boutique{
+			margin-top: 0;
+			div{
+				padding: 20px;
+			}
+			input{
+				width: 100%;
+			}
+			h3{
+				text-align: center;
+				margin-bottom: 5%;
+			}
+		}
+
+		/* POST-IMAGES */
+
+		#div-img-index-ajout{
+			margin-top: 0;
+			padding: 0;
+		}
+	/*Pushy*/
+
+	/*! Pushy - v1.1.0 - 2017-1-30
+	* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+	* https://github.com/christophery/pushy/
+	* by Christopher Yee */
+
+	$menu_width: 250px;
+
+
+	/* Menu Appearance */
+
+	.pushy{
+	    position: fixed;
+	    width: $menu_width;
+	    height: 100%;
+	    top: 0;
+	    z-index: 9999;
+	    background: #191918;
+	    overflow: auto;
+	    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+
+	    a{
+	        display: block;
+	        color: #b3b3b1;
+	        padding: 15px 30px;
+	        text-decoration: none;
+	    }
+
+	    a:hover{
+	        color: #FFF;
+	    }
+
+	    ul:first-child{
+	        margin-top: 10px;
+	    }
+
+	    &.pushy-left{
+	        left: 0;
+	    }
+
+	    &.pushy-right{
+	        right: 0;
+	    }
+	}
+
+	.pushy-content{
+	    visibility: hidden;
+	    li{
+	        a{
+	            font-size: 1em;
+	        }
+	        font-size: 1em;
+	        list-style: none;
+	    }
+	    ul{
+	        margin: 0;
+	        padding: 0;
+	    }
+	}
+
+	/* Menu Movement */
+
+	.pushy-left{
+	    -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+	    -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+	    transform: translate3d( unquote('-' + $menu_width) ,0,0);
+	}
+
+	.pushy-open-left{
+	    #container,
+	    .push{
+	        -webkit-transform: translate3d( $menu_width ,0,0);
+	        -ms-transform: translate3d( $menu_width ,0,0);
+	        transform: translate3d( $menu_width ,0,0);
+	    }
+	}
+
+	.pushy-right{
+	    -webkit-transform: translate3d( $menu_width ,0,0);
+	    -ms-transform: translate3d( $menu_width ,0,0);
+	    transform: translate3d( $menu_width ,0,0);
+	}
+
+	.pushy-open-right{
+	    #container,
+	    .push{
+	        -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+	        -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+	        transform: translate3d( unquote('-' + $menu_width) ,0,0);
+	    }
+	}
+
+	.pushy-open-left,
+	.pushy-open-right{
+	    .pushy{
+	        -webkit-transform: translate3d(0,0,0);
+	        -ms-transform: translate3d(0,0,0);
+	        transform: translate3d(0,0,0);
+	    }
+
+	    .pushy-content{
+	        visibility: visible;
+	    }
+	}
+
+	/* Menu Transitions */
+
+	#container,
+	.pushy,
+	.push{
+	    transition: transform .2s cubic-bezier(.16, .68, .43, .99);
+	}
+
+	.pushy-content{
+	    transition: visibility .2s cubic-bezier(.16, .68, .43, .99);
+	}
+
+	/* Site Overlay */
+
+	.site-overlay{
+	    display: none;
+	}
+
+	.pushy-open-left,
+	.pushy-open-right{
+	    .site-overlay{
+	        display: block;
+	        position: fixed;
+	        top: 0;
+	        right: 0;
+	        bottom: 0;
+	        left: 0;
+	        z-index: 9998;
+	        background-color: rgba(0,0,0,0.5);
+	        -webkit-animation: fade 500ms; 
+	        animation: fade 500ms;
+	    }
+	}
+
+	@keyframes fade{
+	    0%   { opacity: 0; }
+	    100% { opacity: 1; }
+	}
+
+	@-webkit-keyframes fade{
+	    0%   { opacity: 0; }
+	    100% { opacity: 1; }
+	}
+
+	/* Submenu Appearance */
+
+	.pushy-submenu{
+	    ul{
+	        padding-left: 15px;
+	        transition: max-height 0.2s ease-in-out,
+	                    visibility 0.2s ease-in-out;
+
+	        .pushy-link{
+	            transition: opacity 0.2s ease-in-out;
+	        }
+	    }
+
+	    /* Submenu Buttons */
+
+	    button{
+	        width: 100%;
+	        color: #b3b3b1;
+	        padding: 15px 30px;
+	        text-align: left;
+	        background: transparent;
+	        border: 0;
+
+	        &:hover{
+	            color: #FFF;
+	        }
+	    }
+
+	    /* Submenu Icon */
+
+	    > a, 
+	    > button {
+	        position: relative;
+	    }
+
+	    > a::after, 
+	    > button::after {
+	        content: '';
+	        display: block;
+	        height: 11px;
+	        width: 8px;
+	        position: absolute;
+	        top: 50%;
+	        right: 15px;
+	        background: url("../img/arrow.svg") no-repeat;
+	        -webkit-transform: translateY(-50%);
+	        -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	        transition: transform 0.2s;
+	    }
+	}
+
+	/* Submenu Movement */
+
+	.pushy-submenu-closed{
+	    ul{
+	        max-height: 0;
+	        overflow: hidden;
+	        visibility: hidden;
+	    }
+
+	    .pushy-link{
+	        opacity: 0;
+	    }
+	}
+
+	.pushy-submenu-open{
+	    ul{
+	        max-height: 1000px;
+	        visibility: visible;
+	    }
+
+	    .pushy-link{
+	        opacity: 1;
+	    }
+	    
+	    /* Submenu Icon */
+
+	    a::after,
+	    button::after{
+	        -webkit-transform: translateY(-50%) rotate(90deg);
+	        -ms-transform: translateY(-50%) rotate(90deg);
+	        transform: translateY(-50%) rotate(90deg);
+	    }
+	}
+
+	/*BOUTIQUE*/
+	.parfums-boutique{
+		padding: 0;
+		margin: 0;
+	}
+	#barre-top{
+		p{
+			font-size: 0.5em;
+			text-align: center;
+		}
+	}
+	#barre-icone-accueil{
+		padding: 0;
+		margin: 0;
+		margin-top: 10%;
+		.iconebarre{
+			padding: 0;
+			margin: 0;
+			img{
+				width: 50%;
+				padding-top: 0;
+				margin-left: 25%;
+				margin-bottom: 2%;
+				padding: 5%;
+			}
+			p{
+				text-align: center;
+				font-size: 0.5em;
+				margin-bottom: 2%;
+			}
+		}
+	}
+
+	#content-parfum-mobile{
+		margin-top: 5%;
+		margin-bottom: 5%;
+		p{
+			text-align: justify;
+		}
+		img{
+			margin-top: 3%;
+			box-shadow: 5px 5px 20px grey;
+		}
+		h2{
+			font-size: 20px;
+		}
+		#micro-img-product{
+			margin-bottom: 5%;
+			img{
+				margin-right: 2%;
+			}
+		}
+		#buy-it{
+			background-color: #9F663B;
+			color: white;
+			width: 170px;
+			height: 30px;
+			font-size: 1.1em;
+			border: none;
+			text-align: center;
+			border-radius: 50px;
+			margin-left: 9vw;
+			margin-top: 8%;
+			box-shadow: 2px 2px 5px 1px grey;
+		}
+	}
+	#content-boutique{
+		#etape-paiement{
+			width: 100%;
+			margin-left: 0;
+		}
+		#panier{
+			width: 100%;
+			margin-left: 0;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	#form_cart-content{
+		display: block;
+		margin-left: 0;
+		#form_cart-left{
+			#form_adresse{
+				.form-group{
+					width: 25em;
+				}
+			}
+		}
+		#table_cart-finalisation{
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+	.modal{
+		top: 50px;
+	}
+	.modal-content{
+		margin-left: 0;
+		width: 100vw;
+		.titre-modal{
+			font-size: 1.5em;
+		}
+	}
+	.modal-body {
+		.contain-btn-popup{
+			margin-top: 5%;
+			.button-div-popup{
+				background-color: #9F663B;
+				color: white;
+				padding-top: 5%;
+				width: 150px;
+				height: 50px;
+				font-size: 1.1em;
+				border: none;
+				text-align: center;
+				border-radius: 50px;
+				box-shadow: 2px 2px 5px 1px grey;
+			}
+		}
+		border-radius: 5px;
+		padding: 2px 16px;
+	}
+
+	.boutique-header{
+		#barre-top{
+			.btn-retour-vitrine{
+				line-height: 13px !important;
+			}
+		}
+	}
+
+	.content-index-boutique{
+		margin: 0;
+		padding: 0;
+		.div-img-boutccueil{
+			padding: 0;
+			img{
+				padding: 0;
+				filter: opacity(30%);
+			}
+			p{
+				display: block;
+			    line-height: 1em;
+			    top: 25%;
+			    left: 15%;
+			    text-align: center;
+			    font-family: Century;
+			    font-size: 1em;
+			    opacity: 1;
+			    .span-titre{
+					font-size: 1.5em;
+					font-family: Vladimir;
+					line-height: 15px;
+				}
+				.span-intitu{
+					line-height: 70px;
+				}
+			}
+		}
+		.accueil-boutique-img{
+			margin: 0;
+			padding: 0;
+			.accueil-boutique-imgsub{
+				margin: 0;
+				padding: 0;
+
+			}
+		}
+
+	}
+}

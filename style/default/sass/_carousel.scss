@@ -1,0 +1,54 @@
+.divcarousel {
+	padding: 2vh 2vw;
+	overflow: hidden;
+	.carousel {
+		padding: 2vh 1vw;
+		height: 40vh;
+		overflow: hidden;
+	}
+	.carousel-slide {
+		height: 40vh;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.image-carousel {
+		height:40vh;
+		width: 70vw;
+		background-size: cover;
+		background-position: center;
+	}
+	.descriptions-carousel {
+		padding: 2vh;
+		position: absolute;
+		top: 28vh;
+		right: 2.5vh;
+		width: 75%;
+		height: 35%;
+		background-color: rgba(0,0,0,0.6);
+		color: white;
+	}
+	.fleche {
+		position: absolute;
+		top: 2vh;
+		height: 40vh;
+		width: 70vw;
+		display: flex;
+		justify-content :space-between;
+		align-items : center;
+		z-index: 9999;
+		.bgfleche {
+			cursor: pointer;
+			background-color: $couleurbandeau;
+			display: inline-block;
+			height: 7vh;
+			width: 7vh;
+			color: white;
+			font-size: 7vh;
+			display: flex;
+			justify-content:center;
+		}
+	}
+	
+}

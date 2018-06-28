@@ -1,0 +1,395 @@
+@media screen and (min-width: 768px) and (max-width: 1200px){
+	header{
+		.menu-btn{
+			margin-left: 5%;
+            margin-top: 2%;
+		}
+		#logo_JDF{
+		}
+	}
+	#div-premiere{
+	}
+	#accueil-origine{
+		#img-accueil-origine{
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+		}
+	}
+	#container-origine{
+	}
+
+    #image-background-accueil{
+        height: 80vh;
+    }
+    #matieres-premieres{
+        margin-bottom: 3%;
+    }
+
+/* COLLECTION ORIGINE */
+    #accueil-origine{
+        margin-top: 0;
+        height: 680px;
+    }
+    #origine-div1 p, #origine-div2 p{
+        font-size: 1em;
+    }
+
+    #origin-liste{
+    padding-top: 0;
+    height: 0; }
+
+    .div-pyramide{
+
+        width: 50%;
+        margin-left: 0;
+    }
+    #container-origine{
+        margin-top: -50px;
+    }
+
+/* COLLECTION HESPERIDES */
+    
+    #accueil-jh{
+
+    }
+    #hesperides-div1{
+        font-size: 1em;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #hesperides-div2{
+        font-size: 1em;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .conteneur-images{
+        background-repeat: no-repeat;
+        height: 50em;
+    }
+    #couverture_hesperyde{
+        background-size: initial;
+    }
+    #parfum_osiris{
+        background-repeat: repeat-y;
+    }
+
+    /* PARFUMEUR */
+
+    #div2-parfumeur {
+        padding-left: 0;
+        img{
+            margin-left: 0;
+        }
+        #div2div1-parfumeur{
+            p, h3{
+                margin-left: 4%;
+                padding-right: 4%;
+            }
+        }
+    } 
+    #div3-parfumeur img{
+        padding-left: 0;
+    }
+
+    /* MARQUE AUJOURD'HUI */
+
+    #marque-aujourdhui{
+
+        #marque-auj1{
+            width: 100%;
+        }
+        #div1-marque{
+            p{
+                padding-left: 0;
+            }
+        }
+    }
+
+    /* COLLECTION 1920 */
+
+    #accueil-1920{
+        height: 400px;
+    }
+
+    /*COLLECTION ETOFFE */
+
+    #img-accueil-etoffe{
+        height: 600px;
+    }
+    #div2-etoffes{
+        height: initial;
+        background-repeat: repeat;
+        margin-bottom: 6%;
+    }
+    .etoffes-parfums{
+        background-size: initial;
+    }
+    .particular_etoffe{
+        background-size: 100%;
+    }
+    .particular-etoffe_2{
+        background-size: 120%;
+    }
+    .images-parfums-etoffe{
+        margin-left: 0;
+    }
+    .pres-etoffe{
+        width: 50%;
+        margin-top: 0;
+    }
+
+/* ADMINISTRATEUR */
+
+    /*ADMIN-TEMPLATE */
+
+    #nav-admin{
+        width: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+ /*Pushy*/
+ /*! Pushy - v1.1.0 - 2017-1-30
+* Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+* https://github.com/christophery/pushy/
+* by Christopher Yee */
+
+$menu_width: 400px;
+
+
+/* Menu Appearance */
+
+.pushy{
+    position: fixed;
+    width: $menu_width;
+    height: 100%;
+    top: 0;
+    z-index: 9999;
+    background: #191918;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+
+    a{
+        display: block;
+        color: #b3b3b1;
+        padding: 15px 30px;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: #FFF;
+    }
+
+    ul:first-child{
+        margin-top: 10px;
+    }
+
+    &.pushy-left{
+        left: 0;
+    }
+
+    &.pushy-right{
+        right: 0;
+    }
+}
+
+.pushy-content{
+    visibility: hidden;
+    li{
+        a{
+            font-size: 1em;
+        }
+        font-size: 1em;
+        list-style: none;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Menu Movement */
+
+.pushy-left{
+    -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    transform: translate3d( unquote('-' + $menu_width) ,0,0);
+}
+
+.pushy-open-left{
+    #container,
+    .push{
+        -webkit-transform: translate3d( $menu_width ,0,0);
+        -ms-transform: translate3d( $menu_width ,0,0);
+        transform: translate3d( $menu_width ,0,0);
+    }
+}
+
+.pushy-right{
+    -webkit-transform: translate3d( $menu_width ,0,0);
+    -ms-transform: translate3d( $menu_width ,0,0);
+    transform: translate3d( $menu_width ,0,0);
+}
+
+.pushy-open-right{
+    #container,
+    .push{
+        -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+        -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+        transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    }
+}
+
+.pushy-open-left,
+.pushy-open-right{
+    .pushy{
+        -webkit-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+
+    .pushy-content{
+        visibility: visible;
+    }
+}
+
+/* Menu Transitions */
+
+#container,
+.pushy,
+.push{
+    transition: transform .2s cubic-bezier(.16, .68, .43, .99);
+}
+
+.pushy-content{
+    transition: visibility .2s cubic-bezier(.16, .68, .43, .99);
+}
+
+/* Site Overlay */
+
+.site-overlay{
+    display: none;
+}
+
+.pushy-open-left,
+.pushy-open-right{
+    .site-overlay{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9998;
+        background-color: rgba(0,0,0,0.5);
+        -webkit-animation: fade 500ms; 
+        animation: fade 500ms;
+    }
+}
+
+@keyframes fade{
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fade{
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Submenu Appearance */
+
+.pushy-submenu{
+    ul{
+        padding-left: 15px;
+        transition: max-height 0.2s ease-in-out,
+                    visibility 0.2s ease-in-out;
+
+        .pushy-link{
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+
+    /* Submenu Buttons */
+
+    button{
+        width: 100%;
+        color: #b3b3b1;
+        padding: 15px 30px;
+        text-align: left;
+        background: transparent;
+        border: 0;
+
+        &:hover{
+            color: #FFF;
+        }
+    }
+
+    /* Submenu Icon */
+
+    > a, 
+    > button {
+        position: relative;
+    }
+
+    > a::after, 
+    > button::after {
+        content: '';
+        display: block;
+        height: 11px;
+        width: 8px;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        background: url("../img/arrow.svg") no-repeat;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        transition: transform 0.2s;
+    }
+}
+
+/* Submenu Movement */
+
+.pushy-submenu-closed{
+    ul{
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .pushy-link{
+        opacity: 0;
+    }
+}
+
+.pushy-submenu-open{
+    ul{
+        max-height: 1000px;
+        visibility: visible;
+    }
+
+    .pushy-link{
+        opacity: 1;
+    }
+    
+    /* Submenu Icon */
+
+    a::after,
+    button::after{
+        -webkit-transform: translateY(-50%) rotate(90deg);
+        -ms-transform: translateY(-50%) rotate(90deg);
+        transform: translateY(-50%) rotate(90deg);
+    }
+}
+}

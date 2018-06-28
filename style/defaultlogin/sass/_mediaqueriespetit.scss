@@ -1,0 +1,32 @@
+@media screen and (min-width: 901px) and (max-width: 1450px){
+	nav{
+		li a{
+			font-size: 1em;
+		}
+	}
+	#container-origine{
+		margin-top: -150px;
+	}
+	#titre-histoire{
+		h1{
+			font-size: 2em;
+		}
+	}
+	#atelier-content{
+		p {
+			font-size: 1.4em;
+		}
+		#div1-atelier{
+			img{
+				margin-top: -5.5em;
+			}
+		}
+	}
+	#images-rondes-atelier{
+		margin-top: -8%;
+	}
+	#origin-liste{
+		padding-top: 10%;
+		height: 300px;
+	}
+}

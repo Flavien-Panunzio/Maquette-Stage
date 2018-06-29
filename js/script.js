@@ -12,41 +12,45 @@ $(document).ready(function(){
 		var cache;
 		
 		$(".fa-angle-right" ).click(function() {
-			no_spam();
-			active=$("#"+position).attr('id');
-			cache=$("#"+suivant).attr('id');
-			$("#"+position).css({"right": '0vw'});
-			$("#"+suivant).css({"right": '-80vw'});
-			$("#"+position).animate({'right': '80vw'}, 1000,change());
-			$("#"+suivant).animate({'right': '0vw'}, 1000);
+			setTimeout(function(){
+				no_spam();
+				active=$("#"+position).attr('id');
+				cache=$("#"+suivant).attr('id');
+				$("#"+position).css({"right": '0vw'});
+				$("#"+suivant).css({"right": '-80vw'});
+				$("#"+position).animate({'right': '80vw'}, 1000,change());
+				$("#"+suivant).animate({'right': '0vw'}, 1000);
 
-			position++;
-			suivant++;
-			if (position>nb) {
-				position=0;
-				suivant=1;
-			}
-			if (suivant>nb)
-				suivant=0;
+				position++;
+				suivant++;
+				if (position>nb) {
+					position=0;
+					suivant=1;
+				}
+				if (suivant>nb)
+					suivant=0;
+			},1500);
 		});
 
 		$(".fa-angle-left" ).click(function() {
-			no_spam();
-			active=$("#"+position).attr('id');
-			cache=$("#"+suivant).attr('id');
-			$("#"+position).css({"left": '0vw'});
-			$("#"+suivant).css({"left": '-80vw'});
-			$("#"+position).animate({'left': '80vw'}, 1000,change());
-			$("#"+suivant).animate({'left': '0vw'}, 1000);
+			setTimeout(function(){
+				//no_spam();
+				active=$("#"+position).attr('id');
+				cache=$("#"+suivant).attr('id');
+				$("#"+position).css({"left": '0vw'});
+				$("#"+suivant).css({"left": '-80vw'});
+				$("#"+position).animate({'left': '80vw'}, 1000,change());
+				$("#"+suivant).animate({'left': '0vw'}, 1000);
 
-			position--;
-			suivant--;
-			if (position<0) {
-				position=nb;
-				suivant=1;
-			}
-			if (suivant<0)
-				suivant=nb;
+				position--;
+				suivant--;
+				if (position<0) {
+					position=nb;
+					suivant=1;
+				}
+				if (suivant<0)
+					suivant=nb;
+			},1500);
 		});
 
 		function change(){
@@ -61,7 +65,7 @@ $(document).ready(function(){
 				$(".fa-angle-left" ).bind("click");
 				$(".fa-angle-right" ).bind("click");
 				carousel();
-			},1100);
+			},1500);
 		}
 	}
 });

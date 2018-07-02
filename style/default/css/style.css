@@ -1,7 +1,9 @@
+/* line 1, ../sass/style.scss */
 .no-padding {
   padding: 0;
   margin: 0; }
 
+/* line 1, ../sass/_header.scss */
 header {
   background-image: url("../../../img/header.jpg");
   background-size: cover;
@@ -11,6 +13,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
+  /* line 10, ../sass/_header.scss */
   header h1 {
     display: flex;
     align-items: center;
@@ -21,108 +24,268 @@ header {
     margin: 0px;
     padding: 2vh 5vh 3vh;
     border-radius: 0px 0px 100px 100px; }
+  /* line 21, ../sass/_header.scss */
   header .menu {
     background-color: #EEE;
     height: 5vh;
     margin-top: 27vh;
     display: flex;
     align-items: center; }
+    /* line 27, ../sass/_header.scss */
     header .menu ul {
       display: flex;
       width: 100%;
       justify-content: space-around; }
+    /* line 32, ../sass/_header.scss */
     header .menu li {
       list-style-type: none; }
+      /* line 34, ../sass/_header.scss */
       header .menu li a {
         color: #1a1f66; }
 
+/* line 1, ../sass/_content.scss */
+h2 {
+  font-size: 1.1vw; }
+
+/* line 4, ../sass/_content.scss */
 .ptit-truc {
   background-color: #cce5ff;
-  height: 3vw;
+  height: 2.5vw;
   z-index: 10;
   width: 1vw;
   position: absolute;
   top: 7.5vh;
   left: 1vw; }
 
+/* line 13, ../sass/_content.scss */
 .une {
-  height: 3vw;
+  height: 2.5vw;
   position: absolute;
   background-color: #cce5ff;
   z-index: 9999;
-  padding: 0.5vh 2vh;
+  padding: 2vh 2vh;
   top: 6vh;
   left: 2vw;
-  box-shadow: 5px 5px 50px black; }
+  box-shadow: 5px 5px 50px black;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
+/* line 27, ../sass/_content.scss */
 .demarches {
   padding: 3vh 2vw;
-  overflow: hidden;
   background: #EEE;
   background-clip: content-box;
   display: flex;
   align-items: center;
   position: sticky;
   top: 20px; }
+  /* line 35, ../sass/_content.scss */
   .demarches ul {
     margin-top: 10vh;
     list-style-type: none; }
+  /* line 39, ../sass/_content.scss */
   .demarches li:before {
     content: '- '; }
 
-h2 {
-  font-size: 2vw; }
+/* line 43, ../sass/_content.scss */
+.div-actus {
+  padding-right: 0; }
 
+/* line 46, ../sass/_content.scss */
+.actus {
+  height: 100%;
+  padding: 3vh 1.2vw;
+  background-position: center;
+  background-size: cover;
+  background-clip: content-box;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; }
+  /* line 55, ../sass/_content.scss */
+  .actus .date-une {
+    background-color: #cce5ff;
+    position: absolute;
+    top: 3vh;
+    height: 10vh;
+    width: 10vh;
+    text-align: center; }
+    /* line 62, ../sass/_content.scss */
+    .actus .date-une .jours {
+      font-size: 5vh;
+      line-height: 5vh; }
+  /* line 67, ../sass/_content.scss */
+  .actus .description-actus {
+    display: inline-block;
+    width: 75%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2vh;
+    position: absolute;
+    top: 24.2vh;
+    right: 1.2vh; }
+
+/* line 79, ../sass/_content.scss */
+.div-mini {
+  padding-left: 0;
+  padding-right: 1vw; }
+  /* line 82, ../sass/_content.scss */
+  .div-mini .div-mini-actus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 40vh;
+    padding: 3vh 0.5vw 3vh 1vw;
+    text-align: right; }
+    /* line 90, ../sass/_content.scss */
+    .div-mini .div-mini-actus .mini-actus {
+      width: 48%;
+      height: 48%;
+      background-size: cover;
+      background-clip: content-box;
+      display: flex;
+      flex-direction: row-reverse; }
+      /* line 97, ../sass/_content.scss */
+      .div-mini .div-mini-actus .mini-actus .date-actus {
+        display: inline-block;
+        background-color: #cce5ff;
+        padding: 0.5vh 2vh;
+        height: 2.5vw;
+        width: 65%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+
+/* line 112, ../sass/_content.scss */
+.div-calendrier {
+  display: flex;
+  align-content: center;
+  padding: 2vh; }
+  /* line 116, ../sass/_content.scss */
+  .div-calendrier .calendrier {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    /* line 120, ../sass/_content.scss */
+    .div-calendrier .calendrier .jours {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: space-between;
+      display: inline-block;
+      text-align: left; }
+    /* line 128, ../sass/_content.scss */
+    .div-calendrier .calendrier p {
+      display: inline-block;
+      width: 14%; }
+
+/* line 1, ../sass/_carousel.scss */
 .divcarousel {
   padding: 2vh 2vw;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 4vh; }
+  /* line 5, ../sass/_carousel.scss */
   .divcarousel .carousel {
-    padding: 2vh 1vw;
     height: 40vh;
-    overflow: hidden; }
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  /* line 12, ../sass/_carousel.scss */
   .divcarousel .carousel-slide {
     height: 40vh;
     width: 100%;
     position: absolute;
     top: 0;
     right: 0; }
+  /* line 19, ../sass/_carousel.scss */
   .divcarousel .image-carousel {
     height: 40vh;
     width: 70vw;
     background-size: cover;
     background-position: center; }
+  /* line 25, ../sass/_carousel.scss */
   .divcarousel .descriptions-carousel {
     padding: 2vh;
     position: absolute;
-    top: 28vh;
+    top: 32vh;
     right: 2.5vh;
     width: 75%;
-    height: 35%;
     background-color: rgba(0, 0, 0, 0.6);
     color: white; }
-  .divcarousel .fleche {
-    position: absolute;
-    top: 2vh;
-    height: 40vh;
-    width: 70vw;
+
+/* line 36, ../sass/_carousel.scss */
+.publi-recente {
+  position: relative;
+  padding: 1.5vh;
+  background-color: #EEE;
+  background-clip: content-box; }
+  /* line 41, ../sass/_carousel.scss */
+  .publi-recente .carousel-inner {
+    margin: 10vh 5vh; }
+  /* line 44, ../sass/_carousel.scss */
+  .publi-recente .carousel-inner .carousel-item.active,
+  .publi-recente .carousel-inner .carousel-item-next,
+  .publi-recente .carousel-inner .carousel-item-prev {
+    display: flex; }
+  /* line 49, ../sass/_carousel.scss */
+  .publi-recente .carousel-inner .carousel-item-right.active,
+  .publi-recente .carousel-inner .carousel-item-next {
+    transform: translateX(25%); }
+  /* line 54, ../sass/_carousel.scss */
+  .publi-recente .carousel-inner .carousel-item-left.active,
+  .publi-recente .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%); }
+  /* line 59, ../sass/_carousel.scss */
+  .publi-recente .carousel-inner .carousel-item-right,
+  .publi-recente .carousel-inner .carousel-item-left {
+    transform: translateX(0); }
+  /* line 63, ../sass/_carousel.scss */
+  .publi-recente .carousel-indicators .active {
+    background-color: #5F5555; }
+  /* line 67, ../sass/_carousel.scss */
+  .publi-recente .carousel {
     display: flex;
     justify-content: space-between;
+    align-items: center; }
+  /* line 72, ../sass/_carousel.scss */
+  .publi-recente .une2 {
+    height: 2.5vw;
+    position: absolute;
+    background-color: #cce5ff;
+    z-index: 9999;
+    padding: 2vh 2vh;
+    top: 6vh;
+    left: 1vw;
+    box-shadow: 5px 5px 50px black;
+    display: flex;
     align-items: center;
-    z-index: 9999; }
-    .divcarousel .fleche .bgfleche {
-      cursor: pointer;
-      background-color: #cce5ff;
-      display: inline-block;
-      height: 7vh;
-      width: 7vh;
-      color: white;
-      font-size: 7vh;
-      display: flex;
-      justify-content: center; }
+    justify-content: center; }
+  /* line 85, ../sass/_carousel.scss */
+  .publi-recente .ptit-truc {
+    left: 0vw; }
 
+/* line 89, ../sass/_carousel.scss */
+.fleche {
+  cursor: pointer;
+  background-color: #cce5ff;
+  display: inline-block;
+  position: inherit;
+  height: 7vh;
+  width: 7vh;
+  color: white;
+  font-size: 7vh;
+  display: flex;
+  justify-content: center; }
+
+/* line 14, ../sass/style.scss */
 .debug > *, .debug > * > *, .debug > * > * > *, .debug > * > * > * > *, .debug > * > * > * > * > * {
   border: 1px solid red !important; }
+  /* line 16, ../sass/style.scss */
   .debug > * p, .debug > * h1, .debug > * h2, .debug > * h3, .debug > * h4, .debug > * h5, .debug > * h6, .debug > * a, .debug > * > * p, .debug > * > * h1, .debug > * > * h2, .debug > * > * h3, .debug > * > * h4, .debug > * > * h5, .debug > * > * h6, .debug > * > * a, .debug > * > * > * p, .debug > * > * > * h1, .debug > * > * > * h2, .debug > * > * > * h3, .debug > * > * > * h4, .debug > * > * > * h5, .debug > * > * > * h6, .debug > * > * > * a, .debug > * > * > * > * p, .debug > * > * > * > * h1, .debug > * > * > * > * h2, .debug > * > * > * > * h3, .debug > * > * > * > * h4, .debug > * > * > * > * h5, .debug > * > * > * > * h6, .debug > * > * > * > * a, .debug > * > * > * > * > * p, .debug > * > * > * > * > * h1, .debug > * > * > * > * > * h2, .debug > * > * > * > * > * h3, .debug > * > * > * > * > * h4, .debug > * > * > * > * > * h5, .debug > * > * > * > * > * h6, .debug > * > * > * > * > * a {
     color: rgba(35, 31, 32, 0.3) !important; }
+  /* line 19, ../sass/style.scss */
   .debug > * img, .debug > * > * img, .debug > * > * > * img, .debug > * > * > * > * img, .debug > * > * > * > * > * img {
     opacity: 0.3 !important; }

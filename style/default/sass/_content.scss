@@ -1,0 +1,133 @@
+h2 {
+	font-size: 1.1vw;
+}
+.ptit-truc{
+	background-color: $couleurbandeau;
+	height: $hbandeau;
+	z-index: 10;
+	width: 1vw;
+	position: absolute;
+	top: 7.5vh;
+	left: 1vw;
+}
+.une {
+	height: $hbandeau;
+	position: absolute;
+	background-color: #cce5ff;
+	z-index: 9999;
+	padding: 2vh 2vh;
+	top: 6vh;
+	left: 2vw;
+	box-shadow: 5px 5px 50px black;
+	display: flex;
+	align-items : center;
+	justify-content : center;
+}
+
+.demarches {
+	padding: 3vh 2vw;
+	background: $gris;
+	background-clip: content-box;
+	display: flex;
+	align-items:center;
+	position: sticky;
+	top: 20px;
+	ul {
+		margin-top: 10vh;
+		list-style-type: none;
+	}
+	li:before {
+		content: '- ';
+	}	
+}
+.div-actus {
+	padding-right: 0;
+}
+.actus{
+	height: 100%;
+	padding: 3vh 1.2vw;
+	background-position: center;
+	background-size: cover;
+	background-clip: content-box;
+	display: flex;
+	justify-content : flex-end;
+	align-items : flex-end;
+	.date-une{
+		background-color: $couleurbandeau;
+		position: absolute;
+		top: 3vh;
+		height: 10vh;
+		width: 10vh;
+		text-align: center;
+		.jours {
+			font-size: 5vh;
+			line-height: 5vh;
+		}
+	}
+	.description-actus {
+		display: inline-block;
+		width: 75%;
+		color: white;
+		background-color: rgba(0,0,0,0.6);
+		padding: 2vh;
+		position: absolute;
+		top: 24.2vh;
+		right: 1.2vh;
+	}
+}
+
+.div-mini {
+	padding-left: 0;
+	padding-right: 1vw;
+	.div-mini-actus {
+		display: flex;
+		flex-wrap:wrap;
+		justify-content : space-between;
+		flex-direction :column;
+		height: 40vh;
+		padding: 3vh 0.5vw 3vh 1vw;
+		text-align: right;
+		.mini-actus {
+			width: 48%;
+			height: 48%;
+			background-size: cover;
+			background-clip: content-box;
+			display: flex;
+			flex-direction : row-reverse;
+			.date-actus {
+				display: inline-block;
+				background-color: $couleurbandeau;
+				padding: 0.5vh 2vh;
+				height: $hbandeau;
+				width: 65%;
+				text-align: center;
+				display: flex;
+				align-items : center;
+				justify-content : center;
+			}
+		}
+	}
+}
+
+.div-calendrier {
+	display: flex;
+	align-content:center;
+	padding: 2vh;
+	.calendrier {
+		display: flex;
+		flex-direction : column;
+		text-align: center;
+		.jours {
+			display: flex;
+			flex-wrap : wrap;
+			flex-direction :column;
+			align-content:space-between;
+			display: inline-block;
+			text-align: left;
+		}
+		p{
+			display: inline-block;
+			width: 14%;
+		}
+	}
+}

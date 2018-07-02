@@ -1,10 +1,13 @@
 .divcarousel {
 	padding: 2vh 2vw;
 	overflow: hidden;
+	padding-bottom: 4vh;
 	.carousel {
-		padding: 2vh 1vw;
 		height: 40vh;
 		overflow: hidden;
+		display: flex;
+		justify-content :space-between;
+		align-items : center;
 	}
 	.carousel-slide {
 		height: 40vh;
@@ -22,33 +25,76 @@
 	.descriptions-carousel {
 		padding: 2vh;
 		position: absolute;
-		top: 28vh;
+		top: 32vh;
 		right: 2.5vh;
 		width: 75%;
-		height: 35%;
 		background-color: rgba(0,0,0,0.6);
 		color: white;
 	}
-	.fleche {
-		position: absolute;
-		top: 2vh;
-		height: 40vh;
-		width: 70vw;
+	
+}
+.publi-recente {
+	position: relative;
+	padding: 1.5vh;
+	background-color: $gris;
+	background-clip: content-box;
+	.carousel-inner {
+		margin: 10vh 5vh;
+	}
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+	.carousel-inner .carousel-item-right.active,
+	.carousel-inner .carousel-item-next {
+		transform: translateX(25%);
+	}
+
+	.carousel-inner .carousel-item-left.active, 
+	.carousel-inner .carousel-item-prev {
+		transform: translateX(-25%);
+	}
+
+	.carousel-inner .carousel-item-right,
+	.carousel-inner .carousel-item-left{ 
+		transform: translateX(0);
+	}
+	.carousel-indicators .active {
+		background-color: #5F5555;
+	}
+		
+	.carousel {
 		display: flex;
 		justify-content :space-between;
 		align-items : center;
-		z-index: 9999;
-		.bgfleche {
-			cursor: pointer;
-			background-color: $couleurbandeau;
-			display: inline-block;
-			height: 7vh;
-			width: 7vh;
-			color: white;
-			font-size: 7vh;
-			display: flex;
-			justify-content:center;
-		}
 	}
-	
+	.une2 {
+		height: $hbandeau;
+		position: absolute;
+		background-color: #cce5ff;
+		z-index: 9999;
+		padding: 2vh 2vh;
+		top: 6vh;
+		left: 1vw;
+		box-shadow: 5px 5px 50px black;
+		display: flex;
+		align-items : center;
+		justify-content : center;
+	}
+	.ptit-truc{
+		left: 0vw;
+	}
+}
+.fleche {
+	cursor: pointer;
+	background-color: $couleurbandeau;
+	display: inline-block;
+	position: inherit;
+	height: 7vh;
+	width: 7vh;
+	color: white;
+	font-size: 7vh;
+	display: flex;
+	justify-content:center;
 }

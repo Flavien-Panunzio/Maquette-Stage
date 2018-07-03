@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa");
 /* line 1, ../sass/style.scss */
 .no-padding {
   padding: 0;
@@ -72,6 +73,13 @@ h2 {
   justify-content: center; }
 
 /* line 27, ../sass/_content.scss */
+.publi-recente .une, .div-calendrier .une {
+  left: 1vw; }
+/* line 30, ../sass/_content.scss */
+.publi-recente .ptit-truc, .div-calendrier .ptit-truc {
+  left: 0vw; }
+
+/* line 34, ../sass/_content.scss */
 .demarches {
   padding: 3vh 2vw;
   background: #EEE;
@@ -80,19 +88,19 @@ h2 {
   align-items: center;
   position: sticky;
   top: 20px; }
-  /* line 35, ../sass/_content.scss */
+  /* line 42, ../sass/_content.scss */
   .demarches ul {
     margin-top: 10vh;
     list-style-type: none; }
-  /* line 39, ../sass/_content.scss */
+  /* line 46, ../sass/_content.scss */
   .demarches li:before {
     content: '- '; }
 
-/* line 43, ../sass/_content.scss */
+/* line 50, ../sass/_content.scss */
 .div-actus {
   padding-right: 0; }
 
-/* line 46, ../sass/_content.scss */
+/* line 53, ../sass/_content.scss */
 .actus {
   height: 100%;
   padding: 3vh 1.2vw;
@@ -102,7 +110,7 @@ h2 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end; }
-  /* line 55, ../sass/_content.scss */
+  /* line 62, ../sass/_content.scss */
   .actus .date-une {
     background-color: #cce5ff;
     position: absolute;
@@ -110,11 +118,11 @@ h2 {
     height: 10vh;
     width: 10vh;
     text-align: center; }
-    /* line 62, ../sass/_content.scss */
+    /* line 69, ../sass/_content.scss */
     .actus .date-une .jours {
       font-size: 5vh;
       line-height: 5vh; }
-  /* line 67, ../sass/_content.scss */
+  /* line 74, ../sass/_content.scss */
   .actus .description-actus {
     display: inline-block;
     width: 75%;
@@ -125,11 +133,10 @@ h2 {
     top: 24.2vh;
     right: 1.2vh; }
 
-/* line 79, ../sass/_content.scss */
+/* line 86, ../sass/_content.scss */
 .div-mini {
-  padding-left: 0;
   padding-right: 1vw; }
-  /* line 82, ../sass/_content.scss */
+  /* line 88, ../sass/_content.scss */
   .div-mini .div-mini-actus {
     display: flex;
     flex-wrap: wrap;
@@ -138,7 +145,7 @@ h2 {
     height: 40vh;
     padding: 3vh 0.5vw 3vh 1vw;
     text-align: right; }
-    /* line 90, ../sass/_content.scss */
+    /* line 96, ../sass/_content.scss */
     .div-mini .div-mini-actus .mini-actus {
       width: 48%;
       height: 48%;
@@ -146,7 +153,7 @@ h2 {
       background-clip: content-box;
       display: flex;
       flex-direction: row-reverse; }
-      /* line 97, ../sass/_content.scss */
+      /* line 103, ../sass/_content.scss */
       .div-mini .div-mini-actus .mini-actus .date-actus {
         display: inline-block;
         background-color: #cce5ff;
@@ -158,28 +165,75 @@ h2 {
         align-items: center;
         justify-content: center; }
 
-/* line 112, ../sass/_content.scss */
+/* line 118, ../sass/_content.scss */
 .div-calendrier {
   display: flex;
-  align-content: center;
-  padding: 2vh; }
-  /* line 116, ../sass/_content.scss */
+  justify-content: center;
+  padding: 2vh;
+  background-color: #EEE;
+  background-clip: content-box;
+  position: relative; }
+  /* line 125, ../sass/_content.scss */
+  .div-calendrier #c1 {
+    border: solid red 1px; }
+  /* line 128, ../sass/_content.scss */
+  .div-calendrier #c2 {
+    border: solid green 1px; }
+  /* line 131, ../sass/_content.scss */
+  .div-calendrier #c3 {
+    border: solid blue 1px; }
+  /* line 134, ../sass/_content.scss */
   .div-calendrier .calendrier {
+    margin: 15vh 2vh 5vh 2vh;
     display: flex;
     flex-direction: column;
-    text-align: center; }
-    /* line 120, ../sass/_content.scss */
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold; }
+    /* line 143, ../sass/_content.scss */
+    .div-calendrier .calendrier .date1, .div-calendrier .calendrier .date2, .div-calendrier .calendrier .date3 {
+      height: 25vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 6vh;
+      line-height: 10vh; }
+      /* line 151, ../sass/_content.scss */
+      .div-calendrier .calendrier .date1 .j, .div-calendrier .calendrier .date2 .j, .div-calendrier .calendrier .date3 .j {
+        font-size: 10vh; }
+    /* line 155, ../sass/_content.scss */
+    .div-calendrier .calendrier .date1, .div-calendrier .calendrier .rouge-cal {
+      background-color: red;
+      color: white; }
+    /* line 159, ../sass/_content.scss */
+    .div-calendrier .calendrier .date2, .div-calendrier .calendrier .vert-cal {
+      background-color: green;
+      color: white; }
+    /* line 163, ../sass/_content.scss */
+    .div-calendrier .calendrier .date3, .div-calendrier .calendrier .bleu-cal {
+      background-color: blue;
+      color: white; }
+    /* line 167, ../sass/_content.scss */
     .div-calendrier .calendrier .jours {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
       align-content: space-between;
       display: inline-block;
-      text-align: left; }
-    /* line 128, ../sass/_content.scss */
+      background-color: white;
+      color: black;
+      padding: 2vh 0vh; }
+    /* line 177, ../sass/_content.scss */
     .div-calendrier .calendrier p {
+      text-align: center;
       display: inline-block;
       width: 14%; }
+    /* line 182, ../sass/_content.scss */
+    .div-calendrier .calendrier .gris-cal {
+      color: #999; }
 
 /* line 1, ../sass/_carousel.scss */
 .divcarousel {
@@ -219,7 +273,7 @@ h2 {
 /* line 36, ../sass/_carousel.scss */
 .publi-recente {
   position: relative;
-  padding: 1.5vh;
+  padding: 2vh;
   background-color: #EEE;
   background-clip: content-box; }
   /* line 41, ../sass/_carousel.scss */
@@ -245,29 +299,13 @@ h2 {
   /* line 63, ../sass/_carousel.scss */
   .publi-recente .carousel-indicators .active {
     background-color: #5F5555; }
-  /* line 67, ../sass/_carousel.scss */
+  /* line 66, ../sass/_carousel.scss */
   .publi-recente .carousel {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  /* line 72, ../sass/_carousel.scss */
-  .publi-recente .une2 {
-    height: 2.5vw;
-    position: absolute;
-    background-color: #cce5ff;
-    z-index: 9999;
-    padding: 2vh 2vh;
-    top: 6vh;
-    left: 1vw;
-    box-shadow: 5px 5px 50px black;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  /* line 85, ../sass/_carousel.scss */
-  .publi-recente .ptit-truc {
-    left: 0vw; }
 
-/* line 89, ../sass/_carousel.scss */
+/* line 72, ../sass/_carousel.scss */
 .fleche {
   cursor: pointer;
   background-color: #cce5ff;
@@ -279,6 +317,30 @@ h2 {
   font-size: 7vh;
   display: flex;
   justify-content: center; }
+
+/* line 1, ../sass/_footer.scss */
+footer {
+  margin-top: 5vh;
+  background-color: black;
+  color: white; }
+  /* line 5, ../sass/_footer.scss */
+  footer .copy {
+    background-color: grey; }
+    /* line 7, ../sass/_footer.scss */
+    footer .copy a {
+      color: white;
+      text-decoration: underline; }
+  /* line 12, ../sass/_footer.scss */
+  footer .txt {
+    padding: 3vh; }
+  /* line 15, ../sass/_footer.scss */
+  footer .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    /* line 19, ../sass/_footer.scss */
+    footer .logo i {
+      padding: 1vh; }
 
 /* line 14, ../sass/style.scss */
 .debug > *, .debug > * > *, .debug > * > * > *, .debug > * > * > * > *, .debug > * > * > * > * > * {

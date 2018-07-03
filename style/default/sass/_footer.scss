@@ -1,0 +1,23 @@
+footer {
+	margin-top: 5vh;
+	background-color: black;
+	color:white;
+	.copy {
+		background-color: grey;
+		a {
+			color: white;
+			text-decoration: underline;
+		}
+	}
+	.txt {
+		padding: 3vh;
+	}
+	.logo {
+		display: flex;
+		justify-content : center;
+		align-items : center;
+		i {
+			padding: 1vh;
+		}
+	}
+}

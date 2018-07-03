@@ -25,7 +25,7 @@
 
 		<div class="container-fluid">
 			<div class="row">
-				<?php include 'carousel.php'; ?>
+				<?php include 'module/carousel.php'; ?>
 				<div class="col-3 demarches">
 					<div class="une"><h2>MES DÉMARCHES</h2></div>
 					<div class="ptit-truc"></div>
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<div class="container-fluid publi-recente no-padding">
-				<div class="une2"><h2>PUBLICATIONS RÉCENTES</h2></div>
+				<div class="une"><h2>PUBLICATIONS RÉCENTES</h2></div>
 				<div class="ptit-truc"></div>
 				<div id="recipeCarousel" class="carousel slide" data-ride="carousel">
 					<ul class="carousel-indicators">
@@ -104,54 +104,69 @@
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="container-fluid div-calendrier debug">
-			<div class="bg-cal">
+			<div class="container-fluid div-calendrier">
+				<div class="une"><h2>NOTRE AGENDA</h2></div>
+				<div class="ptit-truc"></div>
+				<?php
+					for ($j=1; $j < 4; $j++) { 	?>
+						<div class="calendrier" id="c<?= $j;?>">
+							<?php
+							if ($j==1):
+								?><div class="date<?= $j;?>"><div class="j">14</div> <div>Janvier</div></div>
+							<?php
+							elseif ($j==2):
+								?><div class="date<?= $j;?>"><div class="j">22</div> Août</div>
+							<?php
+							else:
+								?><div class="date<?= $j;?>"><div class="j">01</div> Décembre</div>
+							<?php endif?>
+
+							<div class="jours">
+								<?php
+								echo "<p class='j-sem'>Lun</p><p class='j-sem'>Mar</p><p class='j-sem'>Mer</p><p class='j-sem'>Jeu</p><p class='j-sem'>Ven</p><p class='j-sem'>Sam</p><p class='j-sem'>Dim</p>";
+								echo "<p class='gris-cal'>31</p>";
+								for ($i=1; $i <= 31; $i++) { 
+									if ($j==1&&$i==14) {
+										echo "<p class='rouge-cal'>$i</p>";
+									}
+									elseif ($j==2&&$i==22) {
+										echo "<p class='vert-cal'>$i</p>";
+									}
+									elseif ($j==3&&$i==1) {
+										echo "<p class='bleu-cal'>$i</p>";
+									}
+									else {
+										echo "<p class='noir-cal'>$i</p>";
+									}
+								}
+								echo "<p class='gris-cal'>1</p>"."<p class='gris-cal'>2</p>"."<p class='gris-cal'>3</p>";
+								?>
+							</div>
+						</div>
+						<?php
+					}
+				?>
 				
 			</div>
-			<?php
-				for ($j=1; $j < 4; $j++) { 	?>
-					<div class="calendrier">
-						<?php
-						if ($j==1):
-							?><div class="date<?php echo $j;?>">14 Janvier</div>
-						<?php
-						elseif ($j==2):
-							?><div class="date<?php echo $j;?>">22 Août</div>
-						<?php
-						else:
-							?><div class="date<?php echo $j;?>">01 Décembre</div>
-						<?php endif?>
-
-						<div class="jours">
-							<?php
-							echo "<p>31</p>";
-							for ($i=1; $i <= 31; $i++) { 
-								echo "<p>$i</p>";
-							}?>
-						</div>
-					</div>
-					<?php
-				}
-			?>
-			</div>
 		</div>
+
+		
 
 		<footer class="container-fluid">
 			<div class="row">
-				<div class="col-5">
+				<div class="col-5 txt">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu leo sodales libero eleifend semper. Proin ac leo nisi. Quisque sem nisl, accumsan porta pharetra vitae, sollicitudin eget nunc. Nulla molestie tempus rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 				</div>
-				<div class="col-5">
-					Integer laoreet diam nunc, sed suscipit neque pulvinar nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin at neque a commodo. Nullam diam urna, tincidunt eu congue id, scelerisque sit amet felis. Vestibulum a ligula ut sem sollicitudin congue. Aenean sit amet felis vel lacus malesuada viverra ut vitae dolor. Donec et purus hendrerit, suscipit lacus a, porttitor arcu. 
+				<div class="col-5 txt">
+					Integer laoreet diam nunc, sed suscipit neque pulvinar nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin at neque a commodo. Nullam diam urna, tincidunt eu congue id, scelerisque sit amet felis. Vestibulum a ligula ut sem sollicitudin congue.
 				</div>
-				<div class="col-2">
+				<div class="col-2 logo">
 					<i class="fab fa-facebook-square" style="font-size:40px;"></i>
 					<i class="fab fa-twitter-square" style="font-size:40px;"></i>
 					<i class="fab fa-linkedin" style="font-size:40px;"></i>
 				</div>
-				<div class="col-12">
+				<div class="col-12 copy">
 					<h5 class="text-center">Site créé par <a target="_blanck" href="http://panun.tk">Flavien Panunzio</a> | Copyright &copy 2018 TESTS DE FRANCE Tout droits réservés</h5>
 				</div>
 			</div>

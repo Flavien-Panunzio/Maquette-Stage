@@ -35,7 +35,7 @@
 }
 .publi-recente {
 	position: relative;
-	padding: 1.5vh;
+	padding: 2vh;
 	background-color: $gris;
 	background-clip: content-box;
 	.carousel-inner {
@@ -63,27 +63,10 @@
 	.carousel-indicators .active {
 		background-color: #5F5555;
 	}
-		
 	.carousel {
 		display: flex;
 		justify-content :space-between;
 		align-items : center;
-	}
-	.une2 {
-		height: $hbandeau;
-		position: absolute;
-		background-color: #cce5ff;
-		z-index: 9999;
-		padding: 2vh 2vh;
-		top: 6vh;
-		left: 1vw;
-		box-shadow: 5px 5px 50px black;
-		display: flex;
-		align-items : center;
-		justify-content : center;
-	}
-	.ptit-truc{
-		left: 0vw;
 	}
 }
 .fleche {

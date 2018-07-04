@@ -1,7 +1,11 @@
 <?php 
 	session_start();
+	if (isset($_COOKIE['connexion']) && $_COOKIE['connexion']=="vrai") {
+		$_SESSION["admin"] = true;
+	}
 	if (!isset($_SESSION["admin"]) || !$_SESSION["admin"]) {
 		header("location:/page/admin/login.php");
+		die();
 	}
 ?>
 <!DOCTYPE html>
@@ -76,7 +80,7 @@
 		  <ul class="dropdown-menu settings-menu dropdown-menu-right">
 			<li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
 			<li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-			<li><a class="dropdown-item" href="Module/login.php"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+			<li><a class="dropdown-item" href="Module/logout.php"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
 		  </ul>
 		</li>
 	  </ul>

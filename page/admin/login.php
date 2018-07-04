@@ -1,11 +1,13 @@
 <?php
 	session_start();
+
 	//initialise $_session[message]
 	if (!isset($_SESSION["message"])) {
 		$_SESSION["message"]="";
 	}
 
-	if (isset($_COOKIE["connexion"])&&$_COOKIE["connexion"]=="vrai") {
+	//var_dump($_COOKIE);die();
+	if (isset($_COOKIE['connexion']) && $_COOKIE['connexion']=="vrai") {
 		$_SESSION["admin"] = true;
 		var_dump("cedesf");die();
 	}
@@ -13,8 +15,9 @@
 	//redirection si l'utilisateur est connecté
 	if (isset($_SESSION["admin"])&&$_SESSION["admin"]==true) {
 		header("location:/page/admin/index.php");
+		die();
 	}
-	
+	$_SESSION["admin"] = false;
 ?>
 <!DOCTYPE html>
 <html>
@@ -52,7 +55,7 @@
 				<!--<img src="/img/logo_perso.png">-->
 			</div>
 			<div class="login-box">
-				<form class="login-form" method="POST" action="Module/login.php">
+				<form class="login-form" method="POST" action="Module/verif-login.php">
 					<h6 class="return-home"><a href="/">retour au site</a></h6>
 					<h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Connexion</h3>
 					<div class="form-group">

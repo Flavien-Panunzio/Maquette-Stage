@@ -1,7 +1,8 @@
 <?php
 	//démarre un session et l'initialise à faux
 	session_start();
-	if (isset($_COOKIE["connexion"])&&$_COOKIE["connexion"]=="vrai") {
+	//setcookie('connexion', '', time() + 365*24*3600);
+	if (isset($_COOKIE['connexion'])&&$_COOKIE['connexion']=="vrai") {
 		$_SESSION["admin"] = true;
 	}
 	else
@@ -26,20 +27,25 @@
 
 		//comparaison identifiants avec BDD + redirection
 		if ($mdp == $mdpbdd) {
-			if (isset($_POST["cookies"])) {
-				setcookie('connexion', 'vrai', time() + 365*24*3600, null, null, false, true);
+			if ($_POST["cookies"]=='on') {
+				setcookie('connexion', 'vrai', time() + 365*24*3600);
+				sleep(5);
+				//var_dump($_COOKIE['connexion']);die();
 			}
 			$_SESSION["admin"] = true;
 			header("location:/page/admin/index.php");
+			die();
 		}
 		else{
 			$_SESSION["message"]="Identifiants incorect";
 			header("location:/page/admin/login.php");
+			die();
 		}
 	}
 	//rénitialise $_session[message]+redirection
 	else{
 		unset($_SESSION["message"]);
 		header("location:/page/admin/login.php");
+		die();
 	}
 ?>

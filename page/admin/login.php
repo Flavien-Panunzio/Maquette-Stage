@@ -1,6 +1,6 @@
 <?php
 	session_start();
-
+	//unset($_SESSION["message"]);
 	//initialise $_session[message]
 	if (!isset($_SESSION["message"])) {
 		$_SESSION["message"]="";
@@ -9,7 +9,6 @@
 	//var_dump($_COOKIE);die();
 	if (isset($_COOKIE['connexion']) && $_COOKIE['connexion']=="vrai") {
 		$_SESSION["admin"] = true;
-		var_dump("cedesf");die();
 	}
 
 	//redirection si l'utilisateur est connecté
@@ -66,7 +65,6 @@
 						<label class="control-label">Mot de Passe</label>
 						<input class="form-control" type="password" placeholder="Password" name="mdp">
 					</div>
-					<div class="mess-erreur"><?=$_SESSION["message"];?></div>
 					<div class="form-group">
 						<div class="utility">
 							<div class="animated-checkbox">
@@ -81,11 +79,11 @@
 						<button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>Se Connecter</button>
 					</div>
 				</form>
-				<form class="forget-form" action="index.html">
+				<form class="forget-form" action="Module/mail.php" method="POST">
 					<h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Mot de Passe oublié</h3>
 					<div class="form-group">
-						<label class="control-label">EMAIL</label>
-						<input class="form-control" type="text" placeholder="Email">
+						<label class="control-label">Nom d'utilisateur</label>
+						<input class="form-control" type="text" placeholder="Nom d'utilisateur" name="pseudo">
 					</div>
 					<div class="form-group btn-container">
 						<button class="btn btn-primary btn-block"><i class="fa fa-unlock fa-lg fa-fw"></i>RÉNITIALISER</button>
@@ -103,12 +101,37 @@
 		<script src="/js/main.js"></script>
 		<!-- The javascript plugin to display page loading on top-->
 		<script src="/js/plugins/pace.min.js"></script>
+		<script type="text/javascript" src="/js/plugins/bootstrap-notify.min.js"></script>
+		<script type="text/javascript" src="/js/plugins/sweetalert.min.js"></script>
 		<script type="text/javascript">
 			// Login Page Flipbox control
 			$('.login-content [data-toggle="flip"]').click(function() {
 				$('.login-box').toggleClass('flipped');
 				return false;
 			});
+			var mess="<?= $_SESSION["message"];?>";
+			if (mess=="Mot de Passe modifié avec succès") {
+				$(document).ready(function(){
+					$.notify({
+						icon: "fa fa-check",
+						title: "Mot de Passe modifié avec succès",
+						message: ""
+					},{
+						type: "succes"
+					});
+				});
+			}
+			if (mess=="Identifiants incorect") {
+				$(document).ready(function(){
+					$.notify({
+						icon: "fa fa-exclamation-triangle",
+						title: " Identifiants incorect",
+						message: ""
+					},{
+						type: "danger"
+					});
+				});
+			}
 		</script>
 	</body>
 </html>

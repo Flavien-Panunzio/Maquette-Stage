@@ -25,3 +25,26 @@
 	$("[data-toggle='tooltip']").tooltip();
 
 })();
+
+
+$(document).ready(function(){
+	//ADD CLASS ACTIVE NAVBAR
+	var url=$(location).attr('pathname');
+	$(".active").removeClass("active");
+	$(".is-expanded").removeClass(".is-expanded");
+	$("a[href='"+url+"']").addClass('active');
+	console.log(url);
+	//$("a[href='"+url+"']").parent().addClass(".is-expanded");
+
+
+	$(".visible-btn").click(function(){
+		id=$(this).attr('id');
+
+		$.post('/page/admin/Module/Article/updateArticle.php', {id: id}, function(data) {
+			//console.log(data);
+			document.location.reload();
+		});
+	});
+
+
+});

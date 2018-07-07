@@ -1,14 +1,47 @@
-.mess-erreur {
-	color: red;
-}
 .return-home{
 	position: absolute;
 	top: 2vh;
 	left: 2vh;
 }
-.login-content .login-box .login-form, .login-content .login-box .forget-form {
-	padding: 50px 40px;
+.notify-alert {
+	text-align: center;
 }
-.login-content .login-box {
-	min-height : 450px;
+.article {
+	height: 33vh;
+	.titreArticle {
+		display: flex;
+		flex-direction : column;
+	}
+	.tile-body {
+		display: flex;
+		img {
+			margin: 0vh 2vh 0vh 2vh;
+			max-height: 20vh;
+			max-width: auto;
+		}
+		.txtarticle {
+			height: 20vh;
+			display: inline-block;
+			margin: 0vh 0vh 0vh 0vh;
+			padding: 0vh 1vh 0vh 0vh;
+			text-align: justify;
+			overflow: auto;
+		}
+	}
+	
+}
+.modifArticle {
+	display: flex;
+	flex-direction : column;
+	display: inline-block;
+	width: 100%;
+	h2 {
+		margin: 1vh 0vh 0vh 0vh;
+	}
+	input {
+		margin: 0vh 0vh 1vh 0vh;
+	}
+	.btn-primary {
+		float: right;
+	}
 }

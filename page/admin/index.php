@@ -10,7 +10,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-	<?php include 'Module/template.php'; ?>
+	<?php
+		include '../../configuration/requete.php';
+		include 'Module/template.php';
+	?>
 
 	<main class="app-content">
 	  <div class="app-title">

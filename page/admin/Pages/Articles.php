@@ -2,9 +2,9 @@
 <html lang="fr">
 
 	<?php
+		include '../../../configuration/requete.php';
 		include '../Module/template.php';
 
-		include '../../../configuration/requete.php';
 		$requete=('SELECT * FROM articles');
 		$requete=requeteWHERE($requete);
 	?>
@@ -35,7 +35,7 @@
 
 					<div class="tile-title-w-btn">
 						<h3 class="title">Mes Article</h3>
-						<p><a class="btn btn-primary icon-btn" href=""><i class="fa fa-plus"></i>Ajouter un article</a></p>
+						<p><a class="btn btn-primary icon-btn" href="../Module/Article/newArticle.php"><i class="fa fa-plus"></i>Ajouter un article</a></p>
 					</div>
 					<div class="tile-body">
 						<b>Card with action button </b><br>

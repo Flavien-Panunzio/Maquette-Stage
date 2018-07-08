@@ -30,18 +30,23 @@
 	}
 	
 }
+.modif-article {
+	display: flex;
+	justify-content: space-between;
+	.saveArticle {
+		float: right;
+	}	
+}
+
 .modifArticle {
 	display: flex;
 	flex-direction : column;
 	display: inline-block;
 	width: 100%;
-	h2 {
-		margin: 1vh 0vh 0vh 0vh;
-	}
-	input {
-		margin: 0vh 0vh 1vh 0vh;
-	}
-	.btn-primary {
-		float: right;
+}
+
+.user-settings {
+	button{
+		margin: 2vh;
 	}
 }

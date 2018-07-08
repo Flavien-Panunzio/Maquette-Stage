@@ -3,7 +3,10 @@
 
 
 
-	<?php include '../Module/template.php'; ?>
+	<?php
+		include '../../../configuration/requete.php';
+		include '../Module/template.php';
+	?>
 
 
 	 <main class="app-content">

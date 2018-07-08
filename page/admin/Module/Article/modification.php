@@ -1,7 +1,6 @@
 	<?php
-		include '../template.php';
-
 		include '../../../../configuration/requete.php';
+		include '../template.php';
 
 		$id = $_GET["id"];
 
@@ -54,18 +53,38 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12">
-			 <div class="tile">
-				<div class="tile-body">Modification de l'article</div>
-				<form method="POST" class="modifArticle">
-					<input type="submit" value="Enregistrer les modifications" class="saveArticle btn btn-primary">
-					<h4>Titre</h4><input type="text" name="Titre" value="<?=$Titre?>">
-					<h4>Sous-Titre</h4><input type="text" name="STitre" value="<?=$STitre?>"><br>
-					test.loc/page/articles?article=<input type="text" name="slug" value="<?=$Slug?>">
-					<h4>Description</h4><input type="text" name="Description" value="<?=$Description?>">
-					<h4>Contenu</h4>
-					<textarea id="summernote" name="Contenu"><?=$Contenu?></textarea>
-				</form>
-			 </div>
+				<div class="tile">
+					<div class="line-head modif-article">
+						<h4>Modification de l'article</h4>
+						<input type="submit" value="Enregistrer les modifications" class="saveArticle btn btn-primary">
+					</div>
+					
+					<form method="POST" class="modifArticle">
+						
+						<div class="col-md-12">
+							<label>Titre</label>
+							<input class="form-control" type="text" name="Titre" value="<?=$Titre?>">
+						</div>
+						<div class="col-md-12">
+							<label>Sous-Titre</label>
+							<input class="form-control" type="text" name="STitre" value="<?=$STitre?>">
+						</div>
+						<div class="col-md-2">
+							test.loc/page/articles?article=
+						</div>
+						<div class="col-md-10">
+							<input class="form-control" type="text" name="slug" value="<?=$Slug?>">
+						</div>
+						<div class="col-md-12">
+							<label>Description</label>
+							<input class="form-control" type="text" name="Description" value="<?=$Description?>">
+						</div>
+						<div class="col-md-12">
+							<label>Contenu</label>
+							<textarea id="summernote" name="Contenu"><?=$Contenu?></textarea>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	 </main>

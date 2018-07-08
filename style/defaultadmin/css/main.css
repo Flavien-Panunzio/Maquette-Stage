@@ -11074,14 +11074,17 @@ be a descendant of the grid when it is being dragged.
       text-align: justify;
       overflow: auto; }
 
+.modif-article {
+  display: flex;
+  justify-content: space-between; }
+  .modif-article .saveArticle {
+    float: right; }
+
 .modifArticle {
   display: flex;
   flex-direction: column;
   display: inline-block;
   width: 100%; }
-  .modifArticle h2 {
-    margin: 1vh 0vh 0vh 0vh; }
-  .modifArticle input {
-    margin: 0vh 0vh 1vh 0vh; }
-  .modifArticle .btn-primary {
-    float: right; }
+
+.user-settings button {
+  margin: 2vh; }

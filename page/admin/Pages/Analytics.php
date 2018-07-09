@@ -15,10 +15,6 @@
 				<h1><i class="fa fa-pie-chart"></i> Charts</h1>
 				<p>Various type of charts for your project</p>
 			</div>
-			<ul class="app-breadcrumb breadcrumb">
-				<li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-				<li class="breadcrumb-item"><a href="#">charts</a></li>
-			</ul>
 		</div>
 		<div class="row">
 			<div class="col-md-6">

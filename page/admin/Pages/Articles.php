@@ -5,20 +5,15 @@
 		include '../../../configuration/requete.php';
 		include '../Module/template.php';
 
-		$requete=('SELECT * FROM articles');
+		$requete=('SELECT * FROM articles ORDER BY Id DESC');
 		$requete=requeteWHERE($requete);
 	?>
 	 <main class="app-content">
 		<div class="app-title">
 			<div>
-				<h1><i class="fa fa-laptop"></i> Cards</h1>
-				<p>Material design inspired cards</p>
+				<h1><i class="fa fa-file-text"></i> Mes articles</h1>
+				<p>Espace Administrateur de votre site web</p>
 			</div>
-			<ul class="app-breadcrumb breadcrumb">
-				<li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-				<li class="breadcrumb-item">UI</li>
-				<li class="breadcrumb-item"><a href="#">Cards</a></li>
-			</ul>
 		</div>
 		<div class="row">
 			<div class="col-md-12">
@@ -55,7 +50,7 @@
 								<h4><?= $value->Sous_Titre;?></h4>	
 							</div>
 							
-							<div class="btn-group"><a class="btn btn-primary visible-btn" id="<?= $value->Id ?>" href="#"><i class="fa fa-lg <?= $visible ?>"></i></a><a class="btn btn-primary" href="../Module/Article/modification.php?id=<?= $value->Id ?>"><i class="fa fa-lg fa-edit"></i></a><a class="btn btn-primary" href="#"><i class="fa fa-lg fa-trash"></i></a></div>
+							<div class="btn-group"><a class="btn btn-primary visible-btn" id="<?= $value->Id ?>" href="#"><i class="fa fa-lg <?= $visible ?>"></i></a><a class="btn btn-primary" href="../Module/Article/modification.php?id=<?= $value->Id ?>"><i class="fa fa-lg fa-edit"></i></a><button class="btn btn-primary suppr-article" id="<?= $value->Id ?>"><i class="fa fa-lg fa-trash"></i></button></div>
 						</div>
 
 						<div class="tile-body">
@@ -80,19 +75,25 @@
 	 <script src="/js/main.js"></script>
 	<script src="/js/plugins/pace.min.js"></script>
 	<script type="text/javascript">
-		$('.fa-trash').click(function(){
+		$('.suppr-article').click(function(e){
+			id=e.target.id;
 			swal({
-				title: "Are you sure?",
-				text: "You will not be able to recover this imaginary file!",
+				title: "Êtes-vous sûr ?",
+				text: "Vous allez supprimer cet article et il ne sera plus récupérable",
 				type: "warning",
 				showCancelButton: true,
-				confirmButtonText: "Yes, delete it!",
-				cancelButtonText: "No, cancel plx!",
+				confirmButtonText: "Oui, je suis sûr",
+				cancelButtonText: "Non, je me suis trompé",
 				closeOnConfirm: false,
 				closeOnCancel: false
 			}, function(isConfirm) {
 				if (isConfirm) {
-					swal("Deleted!", "Your imaginary file has been deleted.", "success");
+					
+					console.log(id);
+					$.post('/page/admin/Module/Article/supprArticle.php', {id: id}, function(data) {
+						document.location.reload();
+						swal("Supprimé!", "Votre article a bien été supprimé", "success");
+					});
 				} else {
 					swal("Cancelled", "Your imaginary file is safe :)", "error");
 				}

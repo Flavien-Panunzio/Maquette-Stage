@@ -6,15 +6,12 @@
 		}
 			$requete=$connection->prepare($requeteSQL);
 			$resultat=$requete->execute($variableSQL);
-
 			if (!$update) {
 				$resultat = $requete->fetchAll(PDO::FETCH_OBJ);
 				$requete->closeCursor();
 				return($resultat);
 			}
 			$requete->closeCursor();
-			$id = $connection->lastInsertId();
-			return $id;
 	}
 
 	function connect(){

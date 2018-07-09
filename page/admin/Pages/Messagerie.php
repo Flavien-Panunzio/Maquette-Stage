@@ -15,10 +15,6 @@
 					<h1><i class="fa fa-envelope-o"></i> Mailbox</h1>
 					<p>A Mailbox page sample</p>
 				</div>
-				<ul class="app-breadcrumb breadcrumb">
-					<li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-					<li class="breadcrumb-item"><a href="#">Mailbox</a></li>
-				</ul>
 			</div>
 			<div class="row">
 				<div class="col-md-3"><a class="mb-2 btn btn-primary btn-block" href="">Compose Mail</a>

@@ -45,8 +45,61 @@
 	width: 100%;
 }
 
+.togle {
+	padding-top: 20px;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	span{
+		text-align: left;
+	}
+}
 .user-settings {
 	button{
 		margin: 2vh;
+	}
+}
+.app-sidebar{
+	z-index: 9999999;
+}
+.app-header{
+	z-index: 10000000;
+}
+
+.divimgUploads{
+	display: flex;
+	flex-wrap : wrap;
+	align-items : center;
+	justify-content : space-around;
+	.imgUploads{
+		height: 15%;
+		width: 15%;
+		img{
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.overlay{
+		background-color: rgba(255,255,255,0.3);
+		opacity: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 99999;
+		display: flex;
+		align-items : center;
+		justify-content : center;
+		justify-content : space-around;
+		padding: 15%;
+		button{
+			display: flex;
+			justify-content:center;
+			align-items:center;
+			i{
+				margin:0;
+			}
+		}
+	}
+	.imgUploads:hover .overlay{
+		opacity: 1;
 	}
 }

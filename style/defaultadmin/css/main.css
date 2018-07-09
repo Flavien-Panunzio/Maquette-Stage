@@ -5,6 +5,10 @@
  * ================================*/
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,400i,700);
 @import url(https://fonts.googleapis.com/css?family=Niconne);
+.no-padding {
+  padding: 0;
+  margin: 0; }
+
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -11086,5 +11090,50 @@ be a descendant of the grid when it is being dragged.
   display: inline-block;
   width: 100%; }
 
+.togle {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .togle span {
+    text-align: left; }
+
 .user-settings button {
   margin: 2vh; }
+
+.app-sidebar {
+  z-index: 9999999; }
+
+.app-header {
+  z-index: 10000000; }
+
+.divimgUploads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around; }
+  .divimgUploads .imgUploads {
+    height: 15%;
+    width: 15%; }
+    .divimgUploads .imgUploads img {
+      height: 100%;
+      width: 100%; }
+  .divimgUploads .overlay {
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 15%; }
+    .divimgUploads .overlay button {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .divimgUploads .overlay button i {
+        margin: 0; }
+  .divimgUploads .imgUploads:hover .overlay {
+    opacity: 1; }

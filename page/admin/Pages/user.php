@@ -9,7 +9,6 @@
 
 		//Vérifie que une photo a bien été uploadé
 		if (isset($_FILES["photo"]["name"]) && !empty($_FILES["photo"]["name"])) {
-			
 			//vérifie le format de l'image
 			switch ($_FILES["photo"]["type"])
 			{
@@ -115,7 +114,7 @@
 					<div class="clearfix"></div>
 					<div class="col-md-12 mb-6">
 						<label>Photo de Profil</label>
-						<input class="form-control" type="file" name="photo">
+						<input class="form-control" type="file" name="photo" accept="image/*">
 					</div>
 					<div class="clearfix"></div>
 					</div>

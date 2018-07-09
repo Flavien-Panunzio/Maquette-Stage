@@ -3,7 +3,7 @@
 		include '../template.php';
 
 		$id = $_GET["id"];
-
+		
 		if (isset($_POST["Titre"])) {
 			$connection=connect();
 			$_POST["slug"]=trim($_POST["slug"]);
@@ -43,24 +43,20 @@
 	 <main class="app-content">
 		<div class="app-title">
 			<div>
-				<h1><i class="fa fa-dashboard"></i> Blank Page</h1>
-				<p>Start a beautiful journey here</p>
+				<h1><i class="fa fa-file-text"></i> Modifier un article</h1>
+				<p>Espace Administrateur de votre site web</p>
 			</div>
-			<ul class="app-breadcrumb breadcrumb">
-				<li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-				<li class="breadcrumb-item"><a href="#">Blank Page</a></li>
-			</ul>
 		</div>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="tile">
-					<div class="line-head modif-article">
-						<h4>Modification de l'article</h4>
-						<input type="submit" value="Enregistrer les modifications" class="saveArticle btn btn-primary">
-					</div>
+					
 					
 					<form method="POST" class="modifArticle">
-						
+						<div class="line-head modif-article">
+							<h4>Modification de l'article</h4>
+							<input type="submit" value="Enregistrer les modifications" class="saveArticle btn btn-primary">
+						</div>	
 						<div class="col-md-12">
 							<label>Titre</label>
 							<input class="form-control" type="text" name="Titre" value="<?=$Titre?>">
@@ -69,11 +65,9 @@
 							<label>Sous-Titre</label>
 							<input class="form-control" type="text" name="STitre" value="<?=$STitre?>">
 						</div>
-						<div class="col-md-2">
-							test.loc/page/articles?article=
-						</div>
-						<div class="col-md-10">
-							<input class="form-control" type="text" name="slug" value="<?=$Slug?>">
+						<div class="col-md-12 togle">
+							<span class="col-md-2">test.loc/page/articles?article=</span>
+							<input class="form-control  col-md-10" type="text" name="slug" value="<?=$Slug?>">
 						</div>
 						<div class="col-md-12">
 							<label>Description</label>

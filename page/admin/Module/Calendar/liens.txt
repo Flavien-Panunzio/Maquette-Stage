@@ -1,0 +1,2 @@
+https://knowledge.parcours-performance.com/interagir-lagenda-google-via-lapi-oauth-2-0/#Creer_un_script_PHP_pour_modifier_lrsquoagenda
+https://developers.google.com/calendar/quickstart/php

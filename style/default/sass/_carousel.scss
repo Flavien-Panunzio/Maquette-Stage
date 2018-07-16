@@ -25,13 +25,12 @@
 	.descriptions-carousel {
 		padding: 2vh;
 		position: absolute;
-		top: 32vh;
+		bottom: 2.5vh;
 		right: 2.5vh;
 		width: 75%;
 		background-color: rgba(0,0,0,0.6);
 		color: white;
 	}
-	
 }
 .publi-recente {
 	position: relative;
@@ -40,6 +39,7 @@
 	background-clip: content-box;
 	.carousel-inner {
 		margin: 10vh 5vh;
+		padding: 2vh;
 	}
 	.carousel-inner .carousel-item.active,
 	.carousel-inner .carousel-item-next,
@@ -67,6 +67,9 @@
 		display: flex;
 		justify-content :space-between;
 		align-items : center;
+	}
+	.carousel-item{
+		height: 30vh;
 	}
 }
 .fleche {

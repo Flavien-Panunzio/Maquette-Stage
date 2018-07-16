@@ -1,3 +1,12 @@
+<?php 
+	session_start();
+	if (isset($_COOKIE['connexion']) && $_COOKIE['connexion']=="vrai") {
+		$_SESSION["admin"] = true;
+	}
+	if (!isset($_SESSION["admin"]) || !$_SESSION["admin"]) {
+		header("location:/page/admin/login.php");
+	}
+?>
 <?php
 	$requete=('SELECT * FROM login');
 	$requete=requeteWHERE($requete);

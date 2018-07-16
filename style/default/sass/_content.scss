@@ -45,7 +45,11 @@ h2 {
 	}
 	li:before {
 		content: '- ';
-	}	
+	}
+	a {
+		color: black;
+		text-decoration: underline;
+	}
 }
 .div-actus {
 	padding-right: 0;

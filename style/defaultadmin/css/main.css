@@ -5,10 +5,6 @@
  * ================================*/
 @import url(https://fonts.googleapis.com/css?family=Lato:300,400,400i,700);
 @import url(https://fonts.googleapis.com/css?family=Niconne);
-.no-padding {
-  padding: 0;
-  margin: 0; }
-
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -11051,6 +11047,10 @@ be a descendant of the grid when it is being dragged.
 .user .user-settings label {
   color: #666; }
 
+.no-padding {
+  padding: 0;
+  margin: 0; }
+
 .return-home {
   position: absolute;
   top: 2vh;
@@ -11078,25 +11078,44 @@ be a descendant of the grid when it is being dragged.
       text-align: justify;
       overflow: auto; }
 
-.modif-article {
+.modifArticle .line-head {
   display: flex;
   justify-content: space-between; }
-  .modif-article .saveArticle {
-    float: right; }
-
-.modifArticle {
-  display: flex;
-  flex-direction: column;
-  display: inline-block;
-  width: 100%; }
-
-.togle {
-  padding-top: 20px;
+.modifArticle .togle {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .togle span {
-    text-align: left; }
+.modifArticle .d-flex {
+  padding: 2vh 0vh;
+  align-items: center;
+  justify-content: center; }
+  .modifArticle .d-flex .div-img {
+    display: flex;
+    justify-content: center; }
+  .modifArticle .d-flex .div-input {
+    padding: 0; }
+  .modifArticle .d-flex img {
+    width: auto;
+    max-height: 27vh; }
+  .modifArticle .d-flex .overlay {
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 15%; }
+    .modifArticle .d-flex .overlay button {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .modifArticle .d-flex .overlay button i {
+        margin: 0; }
+  .modifArticle .d-flex .div-img:hover .overlay {
+    opacity: 1; }
 
 .user-settings button {
   margin: 2vh; }
@@ -11123,7 +11142,7 @@ be a descendant of the grid when it is being dragged.
     opacity: 0;
     height: 100%;
     width: 100%;
-    z-index: 99999;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11137,3 +11156,8 @@ be a descendant of the grid when it is being dragged.
         margin: 0; }
   .divimgUploads .imgUploads:hover .overlay {
     opacity: 1; }
+
+.modal {
+  z-index: 99999999; }
+  .modal .imgUploads {
+    cursor: pointer; }

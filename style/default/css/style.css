@@ -95,12 +95,16 @@ h2 {
   /* line 46, ../sass/_content.scss */
   .demarches li:before {
     content: '- '; }
+  /* line 49, ../sass/_content.scss */
+  .demarches a {
+    color: black;
+    text-decoration: underline; }
 
-/* line 50, ../sass/_content.scss */
+/* line 54, ../sass/_content.scss */
 .div-actus {
   padding-right: 0; }
 
-/* line 53, ../sass/_content.scss */
+/* line 57, ../sass/_content.scss */
 .actus {
   height: 100%;
   padding: 3vh 1.2vw;
@@ -110,7 +114,7 @@ h2 {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end; }
-  /* line 62, ../sass/_content.scss */
+  /* line 66, ../sass/_content.scss */
   .actus .date-une {
     background-color: #cce5ff;
     position: absolute;
@@ -118,11 +122,11 @@ h2 {
     height: 10vh;
     width: 10vh;
     text-align: center; }
-    /* line 69, ../sass/_content.scss */
+    /* line 73, ../sass/_content.scss */
     .actus .date-une .jours {
       font-size: 5vh;
       line-height: 5vh; }
-  /* line 74, ../sass/_content.scss */
+  /* line 78, ../sass/_content.scss */
   .actus .description-actus {
     display: inline-block;
     width: 75%;
@@ -133,10 +137,10 @@ h2 {
     top: 24.2vh;
     right: 1.2vh; }
 
-/* line 86, ../sass/_content.scss */
+/* line 90, ../sass/_content.scss */
 .div-mini {
   padding-right: 1vw; }
-  /* line 88, ../sass/_content.scss */
+  /* line 92, ../sass/_content.scss */
   .div-mini .div-mini-actus {
     display: flex;
     flex-wrap: wrap;
@@ -145,7 +149,7 @@ h2 {
     height: 40vh;
     padding: 3vh 0.5vw 3vh 1vw;
     text-align: right; }
-    /* line 96, ../sass/_content.scss */
+    /* line 100, ../sass/_content.scss */
     .div-mini .div-mini-actus .mini-actus {
       width: 48%;
       height: 48%;
@@ -153,7 +157,7 @@ h2 {
       background-clip: content-box;
       display: flex;
       flex-direction: row-reverse; }
-      /* line 103, ../sass/_content.scss */
+      /* line 107, ../sass/_content.scss */
       .div-mini .div-mini-actus .mini-actus .date-actus {
         display: inline-block;
         background-color: #cce5ff;
@@ -165,7 +169,7 @@ h2 {
         align-items: center;
         justify-content: center; }
 
-/* line 118, ../sass/_content.scss */
+/* line 122, ../sass/_content.scss */
 .div-calendrier {
   display: flex;
   justify-content: center;
@@ -173,16 +177,16 @@ h2 {
   background-color: #EEE;
   background-clip: content-box;
   position: relative; }
-  /* line 125, ../sass/_content.scss */
+  /* line 129, ../sass/_content.scss */
   .div-calendrier #c1 {
     border: solid red 1px; }
-  /* line 128, ../sass/_content.scss */
+  /* line 132, ../sass/_content.scss */
   .div-calendrier #c2 {
     border: solid green 1px; }
-  /* line 131, ../sass/_content.scss */
+  /* line 135, ../sass/_content.scss */
   .div-calendrier #c3 {
     border: solid blue 1px; }
-  /* line 134, ../sass/_content.scss */
+  /* line 138, ../sass/_content.scss */
   .div-calendrier .calendrier {
     margin: 15vh 2vh 5vh 2vh;
     display: flex;
@@ -192,7 +196,7 @@ h2 {
     color: white;
     font-family: 'Comfortaa', cursive;
     font-weight: bold; }
-    /* line 143, ../sass/_content.scss */
+    /* line 147, ../sass/_content.scss */
     .div-calendrier .calendrier .date1, .div-calendrier .calendrier .date2, .div-calendrier .calendrier .date3 {
       height: 25vh;
       display: flex;
@@ -201,22 +205,22 @@ h2 {
       flex-direction: column;
       font-size: 6vh;
       line-height: 10vh; }
-      /* line 151, ../sass/_content.scss */
+      /* line 155, ../sass/_content.scss */
       .div-calendrier .calendrier .date1 .j, .div-calendrier .calendrier .date2 .j, .div-calendrier .calendrier .date3 .j {
         font-size: 10vh; }
-    /* line 155, ../sass/_content.scss */
+    /* line 159, ../sass/_content.scss */
     .div-calendrier .calendrier .date1, .div-calendrier .calendrier .rouge-cal {
       background-color: red;
       color: white; }
-    /* line 159, ../sass/_content.scss */
+    /* line 163, ../sass/_content.scss */
     .div-calendrier .calendrier .date2, .div-calendrier .calendrier .vert-cal {
       background-color: green;
       color: white; }
-    /* line 163, ../sass/_content.scss */
+    /* line 167, ../sass/_content.scss */
     .div-calendrier .calendrier .date3, .div-calendrier .calendrier .bleu-cal {
       background-color: blue;
       color: white; }
-    /* line 167, ../sass/_content.scss */
+    /* line 171, ../sass/_content.scss */
     .div-calendrier .calendrier .jours {
       display: flex;
       flex-wrap: wrap;
@@ -226,12 +230,12 @@ h2 {
       background-color: white;
       color: black;
       padding: 2vh 0vh; }
-    /* line 177, ../sass/_content.scss */
+    /* line 181, ../sass/_content.scss */
     .div-calendrier .calendrier p {
       text-align: center;
       display: inline-block;
       width: 14%; }
-    /* line 182, ../sass/_content.scss */
+    /* line 186, ../sass/_content.scss */
     .div-calendrier .calendrier .gris-cal {
       color: #999; }
 
@@ -264,21 +268,22 @@ h2 {
   .divcarousel .descriptions-carousel {
     padding: 2vh;
     position: absolute;
-    top: 32vh;
+    bottom: 2.5vh;
     right: 2.5vh;
     width: 75%;
     background-color: rgba(0, 0, 0, 0.6);
     color: white; }
 
-/* line 36, ../sass/_carousel.scss */
+/* line 35, ../sass/_carousel.scss */
 .publi-recente {
   position: relative;
   padding: 2vh;
   background-color: #EEE;
   background-clip: content-box; }
-  /* line 41, ../sass/_carousel.scss */
+  /* line 40, ../sass/_carousel.scss */
   .publi-recente .carousel-inner {
-    margin: 10vh 5vh; }
+    margin: 10vh 5vh;
+    padding: 2vh; }
   /* line 44, ../sass/_carousel.scss */
   .publi-recente .carousel-inner .carousel-item.active,
   .publi-recente .carousel-inner .carousel-item-next,
@@ -304,8 +309,11 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+  /* line 71, ../sass/_carousel.scss */
+  .publi-recente .carousel-item {
+    height: 30vh; }
 
-/* line 72, ../sass/_carousel.scss */
+/* line 75, ../sass/_carousel.scss */
 .fleche {
   cursor: pointer;
   background-color: #cce5ff;

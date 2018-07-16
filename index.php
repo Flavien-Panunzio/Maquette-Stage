@@ -1,3 +1,6 @@
+<?php
+	include 'configuration/requete.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,19 +29,19 @@
 		<div class="container-fluid">
 			<div class="row">
 				<?php include 'module/carousel.php'; ?>
-				<div class="col-3 demarches">
+				<div class="col-md-3 demarches">
 					<div class="une"><h2>MES DÉMARCHES</h2></div>
 					<div class="ptit-truc"></div>
 					<ul>
-						<li>État-civil / Éléctions</li>
-						<li>Jeunesse / Vie Scolaire</li>
-						<li>Nouveaux arrivants</li>
-						<li>Autorisations</li>
-						<li>Déclarations</li>
-						<li>Associations</li>
+						<li><a href="#">État-civil / Éléctions</a></li>
+						<li><a href="#">Jeunesse / Vie Scolaire</a></li>
+						<li><a href="#">Nouveaux arrivants</a></li>
+						<li><a href="#">Autorisations</a></li>
+						<li><a href="#">Déclarations</a></li>
+						<li><a href="#">Associations</a></li>
 					</ul>
 				</div>
-				<div class="col-5 div-actus">
+				<div class="col-md-5 div-actus">
 					<div class="actus" style="background-image: url('img/image 1.jpg');">
 						<div class="une"><h2>ACTUALITÉS</h2></div>
 						<div class="ptit-truc"></div>
@@ -49,7 +52,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-4 div-mini">
+				<div class="col-md-4 div-mini">
 					<div class="div-mini-actus">
 						<div class="mini-actus" style="background-image: url('img/image 2.jpg');">
 							<div class="date-actus"><h2>21 OCTOBRE</h2></div>
@@ -81,22 +84,22 @@
 					
 					<div class="carousel-inner" role="listbox">
 						<div class="carousel-item active">
-							<img class="d-block col-3 img-fluid" src="http://placehold.it/350x180?text=1">
+							<img class="d-block col-3 img-fluid" src="http://placehold.it/120x150?text=1">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block col-3 img-fluid" src="http://placehold.it/350x180?text=2">
+							<img class="d-block col-3 img-fluid" src="http://placehold.it/120x150?text=2">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block col-3 img-fluid" src="http://placehold.it/350x180?text=3">
+							<img class="d-block col-3 img-fluid" src="http://placehold.it/120x150?text=3">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block col-3 img-fluid" src="http://placehold.it/350x180?text=4">
+							<img class="d-block col-3 img-fluid" src="http://placehold.it/120x150?text=4">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block col-3 img-fluid" src="http://placehold.it/350x180?text=5">
+							<img class="d-block col-3 img-fluid" src="http://placehold.it/120x150?text=5">
 						</div>
 						<div class="carousel-item">
-							<img class="d-block col-3 img-fluid" src="http://placehold.it/350x180?text=6">
+							<img class="d-block col-3 img-fluid" src="http://placehold.it/120x150?text=6">
 						</div>
 					</div>
 					<div class="fleche carousel-control-next">

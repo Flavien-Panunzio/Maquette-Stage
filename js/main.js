@@ -38,7 +38,15 @@ $(document).ready(function(){
 
 	$(".visible-btn").click(function(){
 		id=$(this).attr('id');
-		$.post('/page/admin/Module/Article/updateArticle.php', {id: id}, function(data) {
+		btn="visible";
+		$.post('/page/admin/Module/Article/updateArticle.php', {id : id, btn : btn}, function(data) {
+			document.location.reload();
+		});
+	});
+	$(".up-btn").click(function(){
+		id=$(this).attr('id');
+		btn="up";
+		$.post('/page/admin/Module/Article/updateArticle.php', {id : id, btn : btn}, function(data) {
 			document.location.reload();
 		});
 	});

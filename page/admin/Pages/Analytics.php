@@ -1,3 +1,11 @@
+<?php 
+	if (isset($_COOKIE['connexion']) && $_COOKIE['connexion']=="vrai") {
+		$_SESSION["admin"] = true;
+	}
+	if (!isset($_SESSION["admin"]) || !$_SESSION["admin"]) {
+		header("location:/page/admin/login.php");
+	}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 

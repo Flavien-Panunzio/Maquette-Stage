@@ -1,3 +1,11 @@
+<?php 
+	if (isset($_COOKIE['connexion']) && $_COOKIE['connexion']=="vrai") {
+		$_SESSION["admin"] = true;
+	}
+	if (!isset($_SESSION["admin"]) || !$_SESSION["admin"]) {
+		header("location:/page/admin/login.php");
+	}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -39,18 +47,24 @@
 				</div>
 			</div>
 			<?php
-			foreach ($requete as  $value) :
+			foreach ($requete as	$value) :
 				$visible = $value->Visible == 1 ? "fa-eye" : "fa-eye-slash";
+				$Avant = $value->MisEnAvant == 1 ? "fa-star" : "fa-star-o";
 				?>
 				<div class="col-md-6">
 					<div class="tile article">
 						<div class="tile-title-w-btn">
 							<div class="titreArticle">
 								<h3 class="title"><?= $value->Titre;?></h3>
-								<h4><?= $value->Sous_Titre;?></h4>	
+								<h4><?= $value->Sous_Titre;?></h4>
 							</div>
 							
-							<div class="btn-group"><a class="btn btn-primary visible-btn" id="<?= $value->Id ?>" href="#"><i class="fa fa-lg <?= $visible ?>"></i></a><a class="btn btn-primary" href="../Module/Article/modification.php?id=<?= $value->Id ?>"><i class="fa fa-lg fa-edit"></i></a><button class="btn btn-primary suppr-article" id="<?= $value->Id ?>"><i class="fa fa-lg fa-trash"></i></button></div>
+							<div class="btn-group">
+								<a class="btn btn-primary up-btn" id="<?= $value->Id ?>" href="#"><i class="fa <?= $Avant ?>"></i></a>
+								<a class="btn btn-primary visible-btn" id="<?= $value->Id ?>" href="#"><i class="fa fa-lg <?= $visible ?>"></i></a>
+								<a class="btn btn-primary" href="../Module/Article/modification.php?id=<?= $value->Id ?>"><i class="fa fa-lg fa-edit"></i></a>
+								<button class="btn btn-primary suppr-article" id="<?= $value->Id ?>"><i class="fa fa-lg fa-trash"></i></button>
+							</div>
 						</div>
 
 						<div class="tile-body">
@@ -70,7 +84,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/js/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="/js/plugins/sweetalert.min.js"></script>
+	<script src="/js/plugins/sweetalert.min.js"></script>
 	 <!-- The javascript plugin to display page loading on top-->
 	 <script src="/js/main.js"></script>
 	<script src="/js/plugins/pace.min.js"></script>
@@ -88,14 +102,11 @@
 				closeOnCancel: false
 			}, function(isConfirm) {
 				if (isConfirm) {
-					
-					console.log(id);
 					$.post('/page/admin/Module/Article/supprArticle.php', {id: id}, function(data) {
-						document.location.reload();
 						swal("Supprimé!", "Votre article a bien été supprimé", "success");
 					});
 				} else {
-					swal("Cancelled", "Your imaginary file is safe :)", "error");
+					swal("Annulé", "Votre article est encore disponible", "error");
 				}
 			});
 		});

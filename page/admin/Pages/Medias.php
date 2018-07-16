@@ -1,3 +1,11 @@
+<?php 
+	if (isset($_COOKIE['connexion']) && $_COOKIE['connexion']=="vrai") {
+		$_SESSION["admin"] = true;
+	}
+	if (!isset($_SESSION["admin"]) || !$_SESSION["admin"]) {
+		header("location:/page/admin/login.php");
+	}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 	<?php
@@ -25,16 +33,30 @@
 			<div class="col-md-12">
 				 <div class="tile divimgUploads">
 					<?php
+						$id=0;
 						foreach ($fichiers as $value) :?>
 							<div class="tile imgUploads">
 								<img src="/page/admin/Uploads/<?=$value;?>">
 								<div class="overlay">
-									<button class="btn btn-primary"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
-									<button class="btn btn-primary copy" data-clipboard-text="http://test.loc/page/admin/Uploads/<?=$value;?>"><i class="fa fa-link" aria-hidden="true"></i></button>
-									<button class="btn btn-primary"><i class="fa fa-trash" aria-hidden="true"></i></button>
+									<button class="btn btn-primary zoom" id="http://test.loc/page/admin/Uploads/<?=$value;?>"><i class="fa fa-search-plus" aria-hidden="true"></i></button>
+									<button class="btn btn-primary copy" data-clipboard-text="http://test.loc/page/admin/Uploads/<?=$value;?>" id="<?=$id;?>"><i class="fa fa-link" aria-hidden="true"></i></button>
+									<button class="btn btn-primary suppr-image" id="../Uploads/<?=$value;?>"><i class="fa fa-trash" aria-hidden="true"></i></button>
 								</div>
 							</div>
-					<?php endforeach; ?>
+					<?php $id++; endforeach; ?>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<img src="" class="imagepreview" style="width: 100%;" >
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -46,10 +68,73 @@
 	<script src="/js/main.js"></script>
 	 <!-- The javascript plugin to display page loading on top-->
 	<script src="/js/plugins/pace.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+	<script src="/js/plugins/sweetalert.min.js"></script>
 
 	<script type="text/javascript">
-		new ClipboardJS('.copy');
+		$('.copy').tooltip({
+			trigger: 'click',
+			placement: 'bottom'
+		});
+		function setTooltip(message,id) {
+			$('#'+id).tooltip('hide')
+				.attr('data-original-title', message)
+				.tooltip('show');
+		}
+		function hideTooltip(id) {
+			setTimeout(function() {
+				$('#'+id).tooltip('hide');
+			}, 1000);
+		}
+		var clipboard = new Clipboard('.copy');
+		$('.copy').click(function(event) {
+			id=$(this).attr('id');
+		});
+		clipboard.on('success', function(e) {
+			id=e.trigger.id;
+			setTooltip('Copié !',id);
+			hideTooltip(id);
+		});
+		clipboard.on('error', function(e) {
+			id=e.trigger.id;
+			setTooltip('Erreur !',id);
+			hideTooltip(id);
+		});	
+
+		$(function() {
+			$('.zoom').on('click', function() {
+				$('.imagepreview').attr('src', $(this).attr('id'));
+				$('#exampleModalCenter').modal('show');	 
+			});
+			$(document).on('click', function() {
+				$('#exampleModalCenter').modal('hide');	 
+			});
+		});
+
+		$('.suppr-image').click(function(e){
+			id=e.target.id;
+			swal({
+				title: "Êtes-vous sûr ?",
+				text: "Vous allez supprimer cette image, ell ne sera plus récupérable",
+				type: "warning",
+				showCancelButton: true,
+				confirmButtonText: "Oui, je suis sûr",
+				cancelButtonText: "Non, je me suis trompé",
+				closeOnConfirm: false,
+				closeOnCancel: false
+			}, function(isConfirm) {
+				if (isConfirm) {
+					console.log(id);
+					$.post('/page/admin/Module/supprImage.php', {id: id}, function(data) {
+						document.location.reload();
+						swal("Supprimé!", "Votre image a bien été supprimée", "success");
+						
+					});
+				} else {
+					swal("Annulé", "Votre image est encore disponible", "error");
+				}
+			});
+		});
 	</script>
-  </body>
+	</body>
 </html>
